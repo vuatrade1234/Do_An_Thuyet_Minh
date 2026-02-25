@@ -1,1 +1,33 @@
+async void StartTracking()
+{
+    while (true)
+    {
+        var request = new GeolocationRequest(GeolocationAccuracy.High);
+        var location = await Geolocation.GetLocationAsync(request);
 
+        if (location != null)
+        {
+            double targetLat = 10.123456;
+            double targetLng = 106.123456;
+
+            double distance = Location.CalculateDistance(
+                location.Latitude,
+                location.Longitude,
+                targetLat,
+                targetLng,
+                DistanceUnits.Kilometers);
+
+            if (distance <= 0.1)
+                MyImage.IsVisible = true;
+            else
+                MyImage.IsVisible = false;
+        }
+
+        await Task.Delay(3000); // check mỗi 3s
+    }
+}
+<Image x:Name="MyImage"
+       Source="diadiem.jpg"
+       IsVisible="False"
+       HeightRequest="200"
+       Margin="10"/>
