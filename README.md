@@ -14,7 +14,7 @@
 ## 🇻🇳 Thuyết Minh Dự Án (Vietnamese)
 
 ### 📝 Giới thiệu
-Ứng dụng hỗ trợ trải nghiệm ẩm thực tại khu phố Vĩnh Khánh, giúp người dùng dễ dàng khám phá các món ăn đặc sản và địa điểm ăn uống nổi bật.
+Ứng dụng hỗ trợ trải nghiệm ẩm thực tại khu phố Vĩnh Khánh, giúp người dùng dễ dàng khám phá các món ăn đặc sản và địa điểm ăn uống nổi bật bằng hệ thống hỗ trợ text-to-speech.
 
 ### 👥 Đội ngũ Nghiên cứu
 | Họ và Tên | MSSV | Vai trò |
@@ -55,9 +55,7 @@ An application designed to enhance the food tour experience in Vinh Khanh street
 
 ## 📸 Ảnh chụp màn hình / Screenshots
 > *Thêm hình ảnh ứng dụng của bạn vào đây để tăng tính thuyết phục*
-<p align="center">
-  <img src="https://via.placeholder.com/300x600.png?text=App+Screenshot" width="300" />
-</p>
+
 
 ---
 <p align="center"> 
