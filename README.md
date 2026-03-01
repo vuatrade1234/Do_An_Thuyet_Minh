@@ -1,63 +1,50 @@
-# 🛵 Vĩnh Khánh Food Tour Application
+# <p align="center">🎙️ AI Text-to-Speech Research Project 🎙️</p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/render?type=flat&color=f4a261&height=150&section=header&text=FOOD%20TOUR%20APP&fontSize=50" />
+  <img src="https://capsule-render.vercel.app/render?type=rect&color=00b4d8&height=200&section=header&text=TEXT%20TO%20SPEECH&fontSize=70&subText=Multi-language%20Synthesis&subFontSize=25&animation=twinkling" />
 </p>
 
 <p align="center">
-  <a href="#vn">Tiếng Việt</a> | <a href="#en">English</a>
+  <img src="https://img.shields.io/badge/AI-Research-brightgreen?style=for-the-badge&logo=openai" />
+  <img src="https://img.shields.io/badge/Language-Bilingual-blue?style=for-the-badge" />
 </p>
 
 ---
 
-<a id="vn"></a>
-## 🇻🇳 Thuyết Minh Dự Án (Vietnamese)
+## 🔬 Nhóm Nghiên Cứu | Research Team
 
-### 📝 Giới thiệu
-Ứng dụng hỗ trợ trải nghiệm ẩm thực tại khu phố Vĩnh Khánh, giúp người dùng dễ dàng khám phá các món ăn đặc sản và địa điểm ăn uống nổi bật bằng hệ thống hỗ trợ text-to-speech.
+<div align="center">
 
-### 👥 Đội ngũ Nghiên cứu
-| Họ và Tên | MSSV | Vai trò |
-| :--- | :---: | :--- |
-| **Nguyễn Trung Nghĩa** | `3123411197` | 🔍 Nghiên cứu viên |
-| **Lê Hoàng Giang** | `3123411077` | 🔍 Nghiên cứu viên |
+| Vai trò | Thành viên | MSSV |
+| :--- | :--- | :---: |
+| 🛡️ **Nghiên cứu viên** | **Nguyễn Trung Nghĩa** | `3123411197` |
+| 🛡️ **Nghiên cứu viên** | **Lê Hoàng Giang** | `3123411077` |
 
-### 🛠 Công nghệ sử dụng
-- **Framework:** .NET MAUI / Xamarin (Dựa trên file `.xaml`)
-- **Ngôn ngữ:** C#
-- **Nền tảng:** Android / iOS
+</div>
 
 ---
 
-<a id="en"></a>
-## 🇺🇸 Project Description (English)
+## 🚀 Tổng Quan Dự Án | Project Overview
 
-### 📝 Overview
-An application designed to enhance the food tour experience in Vinh Khanh street, allowing users to discover local specialties and top-rated eateries effortlessly.
+Dự án tập trung nghiên cứu và triển khai hệ thống **Text-to-Speech (TTS)**, cho phép chuyển đổi văn bản thô thành giọng nói tự nhiên với độ trễ thấp.
 
-### 👥 Research Team
-| Name | Student ID | Role |
-| :--- | :---: | :--- |
-| **Nguyen Trung Nghia** | `3123411197` | 🔍 Researcher |
-| **Le Hoang Giang** | `3123411077` | 🔍 Researcher |
+### 🇻🇳 Tiếng Việt
+- **Xử lý ngôn ngữ:** Phân tích ngữ pháp và thanh điệu tiếng Việt.
+- **Tính năng:** Hỗ trợ đọc văn bản từ file hoặc nhập liệu trực tiếp.
 
-### 🛠 Tech Stack
-- **Framework:** .NET MAUI / Xamarin
-- **Language:** C#
-- **Platform:** Mobile (Cross-platform)
+### 🇺🇸 English
+- **Natural Synthesis:** High-quality voice output with proper intonation.
+- **Multi-Voice:** Supports various accents and speech rates.
 
 ---
 
-## 📂 Cấu trúc thư mục / Project Structure
-- `VinhKhanhTour/`: Mã nguồn chính của ứng dụng.
-- `MainPage.xaml`: Giao diện chính người dùng.
-- `Image/`: Tài nguyên hình ảnh dự án.
+## 🛠 Kiến Trúc Hệ Thống | Tech Architecture
 
-## 📸 Ảnh chụp màn hình / Screenshots
-> *Thêm hình ảnh ứng dụng của bạn vào đây để tăng tính thuyết phục*
-
-
----
-<p align="center"> 
-  Copyright © 2026 - Nhóm Nghiên Cứu DCT123C2
-</p>
+```mermaid
+graph LR
+    A[Văn bản/Text] --> B{NLP Engine}
+    B --> C[Phân tích âm tiết]
+    C --> D[Bộ tổng hợp/Synthesizer]
+    D --> E((Giọng nói/Audio))
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
