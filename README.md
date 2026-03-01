@@ -1,4 +1,4 @@
-# <p align="center">🎧 Vĩnh Khánh Smart Audio Guide 🎧</p>
+# <p align="center">🎧 Vĩnh Khánh Food Tour 🎧</p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/render?type=rect&color=f4a261&height=220&section=header&text=SMART%20FOOD%20TOUR&fontSize=65&subText=Automated%20Menu%20Narrator%20via%20QR%20&%20GPS&subFontSize=25&animation=fadeIn" />
