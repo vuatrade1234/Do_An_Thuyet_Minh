@@ -1,50 +1,46 @@
-# <p align="center">🎙️ AI Text-to-Speech Research Project 🎙️</p>
+# <p align="center">🎧 Vĩnh Khánh Smart Audio Guide 🎧</p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/render?type=rect&color=00b4d8&height=200&section=header&text=TEXT%20TO%20SPEECH&fontSize=70&subText=Multi-language%20Synthesis&subFontSize=25&animation=twinkling" />
+  <img src="https://capsule-render.vercel.app/render?type=rect&color=f4a261&height=220&section=header&text=SMART%20FOOD%20TOUR&fontSize=65&subText=Automated%20Menu%20Narrator%20via%20QR%20&%20GPS&subFontSize=25&animation=fadeIn" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/AI-Research-brightgreen?style=for-the-badge&logo=openai" />
-  <img src="https://img.shields.io/badge/Language-Bilingual-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Project-Research_&_Development-eb3b5a?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Tech-Text_To_Speech-2d98da?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Feature-QR_Scanner_%26_Geofencing-20bf6b?style=for-the-badge" />
 </p>
 
 ---
 
-## 🔬 Nhóm Nghiên Cứu | Research Team
+## 🔬 Đội Ngũ Nghiên Cứu | Research Team
 
 <div align="center">
 
 | Vai trò | Thành viên | MSSV |
 | :--- | :--- | :---: |
-| 🛡️ **Nghiên cứu viên** | **Nguyễn Trung Nghĩa** | `3123411197` |
-| 🛡️ **Nghiên cứu viên** | **Lê Hoàng Giang** | `3123411077` |
+| 🔍 **Nghiên cứu viên** | **Nguyễn Trung Nghĩa** | `3123411197` |
+| 🔍 **Nghiên cứu viên** | **Lê Hoàng Giang** | `3123411077` |
 
 </div>
 
 ---
 
-## 🚀 Tổng Quan Dự Án | Project Overview
+## 🌟 Ý Tưởng Đột Phá | Core Concept
+Hệ thống giải quyết vấn đề rào cản ngôn ngữ và sự tiện lợi khi trải nghiệm ẩm thực tại phố Vĩnh Khánh thông qua 2 bước chạm:
 
-Dự án tập trung nghiên cứu và triển khai hệ thống **Text-to-Speech (TTS)**, cho phép chuyển đổi văn bản thô thành giọng nói tự nhiên với độ trễ thấp.
-
-### 🇻🇳 Tiếng Việt
-- **Xử lý ngôn ngữ:** Phân tích ngữ pháp và thanh điệu tiếng Việt.
-- **Tính năng:** Hỗ trợ đọc văn bản từ file hoặc nhập liệu trực tiếp.
-
-### 🇺🇸 English
-- **Natural Synthesis:** High-quality voice output with proper intonation.
-- **Multi-Voice:** Supports various accents and speech rates.
+1.  **📲 Quét QR:** Khách hàng quét mã tại cổng hoặc điểm chờ để tải bộ dữ liệu âm thanh.
+2.  **🔊 Tự động thuyết minh:** Khi di chuyển vào bán kính cho phép của một gian hàng, ứng dụng tự động kích hoạt **Text-to-Speech** để đọc thực đơn và giới thiệu món ăn.
 
 ---
 
-## 🛠 Kiến Trúc Hệ Thống | Tech Architecture
+## 🛠 Quy Trình Hoạt Động | Workflow
 
 ```mermaid
-graph LR
-    A[Văn bản/Text] --> B{NLP Engine}
-    B --> C[Phân tích âm tiết]
-    C --> D[Bộ tổng hợp/Synthesizer]
-    D --> E((Giọng nói/Audio))
-    style B fill:#f9f,stroke:#333,stroke-width:2px
-    style D fill:#bbf,stroke:#333,stroke-width:2px
+graph TD
+    A[Khách hàng tới Vĩnh Khánh] --> B(Quét mã QR tại điểm đón)
+    B --> C{Tải Audio Data}
+    C --> D[Di chuyển bằng GPS/Geofencing]
+    D --> E{Trong bán kính cửa hàng?}
+    E -- Có --> F[AI TTS: Tự động đọc Menu]
+    E -- Không --> D
+    F --> G[Trải nghiệm thực tế]
