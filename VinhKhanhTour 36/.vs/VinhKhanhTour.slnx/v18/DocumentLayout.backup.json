@@ -1,0 +1,310 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C#\\VinhKhanhTour\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\views\\mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\views\\mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\views\\mappage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\views\\mappage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\views\\poidetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\views\\poidetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\viewmodels\\mapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\viewmodels\\mapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\views\\settingspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\views\\settingspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\views\\settingspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\views\\settingspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\services\\audioqueueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\services\\audioqueueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\services\\geofenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\services\\geofenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\views\\poilistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\views\\poilistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\views\\poilistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\views\\poilistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\views\\poidetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\views\\poidetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\5bdc5e9618b80b7625016f9019a934aa40eb64e34d35ab6e3ae8df1f3cdf25a2\\TimerQueueTimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\services\\ttsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\services\\ttsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\viewmodels\\poidetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\viewmodels\\poidetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|d:\\c#\\vinhkhanhtour\\vinhkhanhtour\\platforms\\android\\androidmanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{8EC87856-6404-4851-BEFD-D3A614057E1A}|VinhKhanhTour\\VinhKhanhTour.csproj|solutionrelative:vinhkhanhtour\\platforms\\android\\androidmanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\App.xaml",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\App.xaml",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\App.xaml",
+              "RelativeToolTip": "VinhKhanhTour\\App.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-06T09:20:14.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MapPage.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\MapPage.xaml.cs",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\Views\\MapPage.xaml.cs",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\MapPage.xaml.cs",
+              "RelativeToolTip": "VinhKhanhTour\\Views\\MapPage.xaml.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAswGUAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:46:56.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SettingsPage.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\SettingsPage.xaml.cs",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\Views\\SettingsPage.xaml.cs",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\SettingsPage.xaml.cs",
+              "RelativeToolTip": "VinhKhanhTour\\Views\\SettingsPage.xaml.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAowGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T08:04:11.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MapPage.xaml",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\MapPage.xaml",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\Views\\MapPage.xaml",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\MapPage.xaml",
+              "RelativeToolTip": "VinhKhanhTour\\Views\\MapPage.xaml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAALQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-06T08:01:08.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MapViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\ViewModels\\MapViewModel.cs",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\ViewModels\\MapViewModel.cs",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\ViewModels\\MapViewModel.cs",
+              "RelativeToolTip": "VinhKhanhTour\\ViewModels\\MapViewModel.cs",
+              "ViewState": "AgIAACYBAAAAAAAAAAAiwLQBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:20:38.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SettingsPage.xaml",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\SettingsPage.xaml",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\Views\\SettingsPage.xaml",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\SettingsPage.xaml",
+              "RelativeToolTip": "VinhKhanhTour\\Views\\SettingsPage.xaml",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAhwLwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-06T08:03:09.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PoiDetailPage.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\PoiDetailPage.xaml.cs",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\Views\\PoiDetailPage.xaml.cs",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\PoiDetailPage.xaml.cs",
+              "RelativeToolTip": "VinhKhanhTour\\Views\\PoiDetailPage.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T08:19:33.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AudioQueueService.cs",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Services\\AudioQueueService.cs",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\Services\\AudioQueueService.cs",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Services\\AudioQueueService.cs",
+              "RelativeToolTip": "VinhKhanhTour\\Services\\AudioQueueService.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAQwFUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:24:12.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GeofenceService.cs",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Services\\GeofenceService.cs",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\Services\\GeofenceService.cs",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Services\\GeofenceService.cs",
+              "RelativeToolTip": "VinhKhanhTour\\Services\\GeofenceService.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAGAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T08:13:31.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PoiListPage.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\PoiListPage.xaml.cs",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\Views\\PoiListPage.xaml.cs",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\PoiListPage.xaml.cs",
+              "RelativeToolTip": "VinhKhanhTour\\Views\\PoiListPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T08:03:20.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PoiListPage.xaml",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\PoiListPage.xaml",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\Views\\PoiListPage.xaml",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\PoiListPage.xaml",
+              "RelativeToolTip": "VinhKhanhTour\\Views\\PoiListPage.xaml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAIUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-06T08:02:56.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PoiDetailViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\ViewModels\\PoiDetailViewModel.cs",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\ViewModels\\PoiDetailViewModel.cs",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\ViewModels\\PoiDetailViewModel.cs",
+              "RelativeToolTip": "VinhKhanhTour\\ViewModels\\PoiDetailViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T08:10:47.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PoiDetailPage.xaml",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\PoiDetailPage.xaml",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\Views\\PoiDetailPage.xaml",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Views\\PoiDetailPage.xaml",
+              "RelativeToolTip": "VinhKhanhTour\\Views\\PoiDetailPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-06T08:44:20.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TimerQueueTimer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\5bdc5e9618b80b7625016f9019a934aa40eb64e34d35ab6e3ae8df1f3cdf25a2\\TimerQueueTimer.cs",
+              "ToolTip": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\5bdc5e9618b80b7625016f9019a934aa40eb64e34d35ab6e3ae8df1f3cdf25a2\\TimerQueueTimer.cs [Read Only]",
+              "ViewState": "AgIAABgBAAAAAAAAAAAiwCoBAAADAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T08:27:56.996Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TtsService.cs",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Services\\TtsService.cs",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\Services\\TtsService.cs",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Services\\TtsService.cs",
+              "RelativeToolTip": "VinhKhanhTour\\Services\\TtsService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAUwEwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T08:17:45.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AndroidManifest.xml",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Platforms\\Android\\AndroidManifest.xml",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\Platforms\\Android\\AndroidManifest.xml",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\Platforms\\Android\\AndroidManifest.xml",
+              "RelativeToolTip": "VinhKhanhTour\\Platforms\\Android\\AndroidManifest.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-03-06T07:47:35.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\AppShell.xaml",
+              "RelativeDocumentMoniker": "VinhKhanhTour\\AppShell.xaml",
+              "ToolTip": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\AppShell.xaml",
+              "RelativeToolTip": "VinhKhanhTour\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-06T08:00:55.162Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

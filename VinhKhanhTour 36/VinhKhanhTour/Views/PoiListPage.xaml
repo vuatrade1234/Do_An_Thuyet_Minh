@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VinhKhanhTour.Views.PoiListPage"
+             Title="📋 Danh sách điểm"
+             BackgroundColor="#F0F4FF">
+
+    <Grid RowDefinitions="Auto,Auto,*">
+
+        <!-- Thanh tìm kiếm -->
+        <Border Grid.Row="0" BackgroundColor="White" Margin="12,12,12,0"
+                Padding="12,8" StrokeThickness="0">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="14"/>
+            </Border.StrokeShape>
+            <Border.Shadow>
+                <Shadow Brush="Black" Opacity="0.1" Radius="6"/>
+            </Border.Shadow>
+            <Grid ColumnDefinitions="Auto,*,Auto">
+                <Label Grid.Column="0" Text="🔍" FontSize="18"
+                       VerticalOptions="Center" Margin="0,0,8,0"/>
+                <Entry Grid.Column="1"
+                       x:Name="SearchEntry"
+                       Placeholder="Tìm điểm tham quan..."
+                       FontSize="14" BackgroundColor="Transparent"
+                       TextChanged="OnSearchTextChanged"
+                       ReturnCommand="{Binding SearchCommand}"/>
+                <Button Grid.Column="2" Text="✕"
+                        x:Name="ClearBtn"
+                        IsVisible="False"
+                        BackgroundColor="Transparent" TextColor="#999"
+                        FontSize="16" Padding="4,0"
+                        Clicked="OnClearSearch"/>
+            </Grid>
+        </Border>
+
+        <!-- Gợi ý tìm kiếm -->
+        <Border Grid.Row="1" x:Name="SuggestionPanel"
+                IsVisible="False"
+                BackgroundColor="White" Margin="12,4,12,0"
+                Padding="0,4" StrokeThickness="0">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            <Border.Shadow>
+                <Shadow Brush="Black" Opacity="0.1" Radius="4"/>
+            </Border.Shadow>
+            <CollectionView x:Name="SuggestionList" MaximumHeightRequest="200">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="14,10" ColumnDefinitions="Auto,*">
+                            <Label Grid.Column="0" Text="📍" FontSize="16"
+                                   VerticalOptions="Center"/>
+                            <VerticalStackLayout Grid.Column="1" Margin="10,0">
+                                <Label Text="{Binding Name}"
+                                       FontSize="13" FontAttributes="Bold"
+                                       TextColor="#1A237E"/>
+                                <Label Text="{Binding Description}"
+                                       FontSize="11" TextColor="#888"
+                                       MaxLines="1" LineBreakMode="TailTruncation"/>
+                            </VerticalStackLayout>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSuggestionTapped"
+                                                      CommandParameter="{Binding .}"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Border>
+
+        <!-- Danh sách POI -->
+        <CollectionView Grid.Row="2" x:Name="PoiList"
+                        Margin="12,8,12,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="0,0,0,10" BackgroundColor="White"
+                            StrokeThickness="0">
+                        <Border.Shadow>
+                            <Shadow Brush="Black" Opacity="0.1" Radius="6"/>
+                        </Border.Shadow>
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="14"/>
+                        </Border.StrokeShape>
+
+                        <Grid Padding="14,12" ColumnDefinitions="Auto,*,Auto">
+
+                            <Border Grid.Column="0" BackgroundColor="#E8EAF6"
+                                    WidthRequest="48" HeightRequest="48"
+                                    StrokeThickness="0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="12"/>
+                                </Border.StrokeShape>
+                                <Label Text="{Binding CategoryEmoji}" FontSize="22"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                            </Border>
+
+                            <VerticalStackLayout Grid.Column="1" Margin="12,0"
+                                                 VerticalOptions="Center">
+                                <Label Text="{Binding Name}"
+                                       FontAttributes="Bold" FontSize="14"
+                                       TextColor="#1A237E"/>
+                                <Label Text="{Binding Description}"
+                                       FontSize="11" TextColor="#888"
+                                       MaxLines="2"
+                                       LineBreakMode="TailTruncation"/>
+                                <Label Text="{Binding DistanceFromUser,
+                                              StringFormat='📏 {0:F0}m'}"
+                                       FontSize="11" TextColor="#E65100"
+                                       Margin="0,2,0,0"/>
+                            </VerticalStackLayout>
+
+                            <!-- Nút chỉ đường trong app -->
+                            <Button Grid.Column="2"
+                                    Text="🧭"
+                                    BackgroundColor="#1A237E" TextColor="White"
+                                    FontSize="18" WidthRequest="44" HeightRequest="44"
+                                    CornerRadius="22" Padding="0"
+                                    Clicked="OnNavigateClicked"
+                                    CommandParameter="{Binding .}"/>
+                        </Grid>
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnPoiTapped"
+                                                  CommandParameter="{Binding .}"/>
+                        </Border.GestureRecognizers>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>

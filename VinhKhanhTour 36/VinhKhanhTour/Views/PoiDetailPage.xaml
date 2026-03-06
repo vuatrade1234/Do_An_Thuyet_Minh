@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VinhKhanhTour.Views.PoiDetailPage"
+             Title="Chi tiết điểm tham quan">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="0">
+
+            <Grid HeightRequest="220">
+                <Image x:Name="PoiImage" Aspect="AspectFill" HeightRequest="220"/>
+                <BoxView BackgroundColor="#80000000"
+                         VerticalOptions="End" HeightRequest="80"/>
+                <VerticalStackLayout VerticalOptions="End" Padding="16,12">
+                    <Label x:Name="LblName" TextColor="White"
+                           FontSize="20" FontAttributes="Bold"/>
+                    <Label x:Name="LblCategory" TextColor="#FFE0B2" FontSize="13"/>
+                </VerticalStackLayout>
+            </Grid>
+
+            <Grid BackgroundColor="#FFF8F0" Padding="16,12"
+                  ColumnDefinitions="*,*">
+                <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
+                    <Label Text="📏 Khoảng cách" FontSize="11"
+                           TextColor="#999" HorizontalOptions="Center"/>
+                    <Label x:Name="LblDistance" FontSize="18"
+                           FontAttributes="Bold" TextColor="#E65100"
+                           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+                    <Label Text="🎯 Vùng kích hoạt" FontSize="11"
+                           TextColor="#999" HorizontalOptions="Center"/>
+                    <Label x:Name="LblRadius" FontSize="18"
+                           FontAttributes="Bold" TextColor="#E65100"
+                           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Grid>
+
+            <BoxView HeightRequest="1" BackgroundColor="#EEE" Margin="16,0"/>
+
+            <VerticalStackLayout Padding="16" Spacing="10">
+                <Label Text="📖 Giới thiệu" FontSize="16"
+                       FontAttributes="Bold" TextColor="#333"/>
+                <Label x:Name="LblDescription" FontSize="14"
+                       TextColor="#555" LineHeight="1.5"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Padding="16,0,16,16" Spacing="10">
+                <Label Text="🎙 Nội dung thuyết minh" FontSize="16"
+                       FontAttributes="Bold" TextColor="#333"/>
+                <Border BackgroundColor="#FFF3E0" Padding="14,12" StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Label x:Name="LblScript" FontSize="13"
+                           TextColor="#444" LineHeight="1.6" FontAttributes="Italic"/>
+                </Border>
+            </VerticalStackLayout>
+
+            <Grid Padding="16,0,16,24" ColumnDefinitions="*,*" ColumnSpacing="10">
+                <Button Grid.Column="0" Text="🔊 Nghe thuyết minh"
+                        Clicked="OnSpeakClicked"
+                        BackgroundColor="#E65100" TextColor="White"
+                        FontSize="13" Padding="0,12" CornerRadius="10"/>
+                <Button Grid.Column="1" Text="🗺 Quay lại bản đồ"
+                        Clicked="OnMapClicked"
+                        BackgroundColor="#F5F5F5" TextColor="#333"
+                        FontSize="13" Padding="0,12" CornerRadius="10"/>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

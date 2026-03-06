@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell x:Class="VinhKhanhTour.AppShell"
+       xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:VinhKhanhTour.Views"
+       Shell.TabBarBackgroundColor="#1A237E"
+       Shell.TabBarForegroundColor="White"
+       Shell.TabBarUnselectedColor="#7986CB"
+       Shell.TabBarTitleColor="White">
+
+    <TabBar>
+        <ShellContent Title="Bản đồ" Icon="icon_map.png"
+                      ContentTemplate="{DataTemplate views:MapPage}"
+                      Route="MapPage"/>
+        <ShellContent Title="Danh sách" Icon="icon_list.png"
+                      ContentTemplate="{DataTemplate views:PoiListPage}"
+                      Route="PoiListPage"/>
+        <ShellContent Title="Cài đặt" Icon="icon_settings.png"
+                      ContentTemplate="{DataTemplate views:SettingsPage}"
+                      Route="SettingsPage"/>
+    </TabBar>
+</Shell>

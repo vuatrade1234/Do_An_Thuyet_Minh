@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+	<!-- GPS -->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+
+	<!-- Internet (Mapbox) -->
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+	<!-- Audio / TTS -->
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+
+	<application android:allowBackup="true"
+                 android:icon="@mipmap/appicon"
+                 android:roundIcon="@mipmap/appicon_round"
+                 android:supportsRtl="true"
+                 android:usesCleartextTraffic="true">
+
+		<!-- Foreground Service cho background GPS -->
+		<service android:name=".GpsBackgroundService"
+                 android:foregroundServiceType="location"
+                 android:exported="false"/>
+
+		<!-- Mapbox Token -->
+		<meta-data android:name="com.mapbox.token"
+                   android:value="pk.eyJ1IjoiZ2lhbmdsZTA0MDUiLCJhIjoiY21tZGl0bnp3MDQxYjJvcHd2OWFkazc3YiJ9.wDyrCU-acnEXB1-5uMqEzw"/>
+
+	</application>
+</manifest>
