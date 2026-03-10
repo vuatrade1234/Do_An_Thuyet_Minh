@@ -30,7 +30,7 @@
 
 1.  **📲 Quét mã QR:** Khách hàng quét mã tại điểm chờ để tải nhanh bộ dữ liệu âm thanh (Audio Data).
 2.  **🛰️ Định vị Bán kính:** Khi khách di chuyển vào phạm vi của một gian hàng, ứng dụng tự động nhận diện vị trí.
-3.  **🔊 Text-to-Speech:** Hệ thống tự động đọc thực đơn (Menu) và giới thiệu món ăn dựa trên dữ liệu đã tải.
+3.  **🔊 Text-to-Speech:* Hệ thống tự động đọc thực đơn (Menu) và giới thiệu món ăn dựa trên dữ liệu đã tải.
 
 ---
 
