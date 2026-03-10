@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace VinhKhanhTour;
 
-public partial class MainPage : ContentPage
+public partial class MainPage : Content
 {
     private SQLiteAsyncConnection? _db;
     private List<POI> _danhSachPOI = new List<POI>();
