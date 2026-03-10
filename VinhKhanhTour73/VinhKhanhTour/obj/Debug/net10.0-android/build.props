@@ -15,7 +15,11 @@ androidsdkpath=c:\program files (x86)\android\android-sdk\
 androidndkpath=
 javasdkpath=c:\program files\android\openjdk\jdk-21.0.8\
 androidsequencepointsmode=none
+<<<<<<< HEAD
 androidnetsdkversion=36.1.2
+=======
+androidnetsdkversion=36.1.30
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
 androiduselatestplatformsdk=false
 targetframeworkversion=v10.0
 androidcreatepackageperabi=
@@ -23,8 +27,15 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
+<<<<<<< HEAD
 _nugetassetsfilehash=424bc0b85e99bb2896c05f732b2cc485c8572d5b87a39346ed7fe71aab1ad431
 typemapkind=strings-asm
 androidmanifestplaceholders=
 projectfullpath=d:\do_an_thuyet_minh-main\do_an_thuyet_minh-main\vinhkhanhtour73\vinhkhanhtour\vinhkhanhtour.csproj
+=======
+_nugetassetsfilehash=96be7b67ad6e2fb0ce9edc9b9dd8e413c4328689c8784394f91a279536ba56b1
+typemapkind=strings-asm
+androidmanifestplaceholders=
+projectfullpath=d:\c#\vinhkhanhtour\vinhkhanhtour\vinhkhanhtour.csproj
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
 androidusedesignerassembly=true

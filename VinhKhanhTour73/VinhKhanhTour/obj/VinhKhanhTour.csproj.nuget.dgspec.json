@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\Do_An_Thuyet_Minh-main\\Do_An_Thuyet_Minh-main\\VinhKhanhTour73\\VinhKhanhTour\\VinhKhanhTour.csproj": {}
   },
   "projects": {
@@ -12,13 +13,30 @@
         "projectPath": "D:\\Do_An_Thuyet_Minh-main\\Do_An_Thuyet_Minh-main\\VinhKhanhTour73\\VinhKhanhTour\\VinhKhanhTour.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
         "outputPath": "D:\\Do_An_Thuyet_Minh-main\\Do_An_Thuyet_Minh-main\\VinhKhanhTour73\\VinhKhanhTour\\obj\\",
+=======
+    "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\VinhKhanhTour.csproj": {}
+  },
+  "projects": {
+    "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\VinhKhanhTour.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\VinhKhanhTour.csproj",
+        "projectName": "VinhKhanhTour",
+        "projectPath": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\VinhKhanhTour.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\C#\\VinhKhanhTour\\VinhKhanhTour\\obj\\",
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -38,11 +56,19 @@
             "targetAlias": "net10.0-android",
             "projectReferences": {}
           },
+<<<<<<< HEAD
           "net10.0-ios26.1": {
             "targetAlias": "net10.0-ios",
             "projectReferences": {}
           },
           "net10.0-maccatalyst26.1": {
+=======
+          "net10.0-ios26.2": {
+            "targetAlias": "net10.0-ios",
+            "projectReferences": {}
+          },
+          "net10.0-maccatalyst26.2": {
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
             "targetAlias": "net10.0-maccatalyst",
             "projectReferences": {}
           },
@@ -77,12 +103,20 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[10.0.1, )"
+=======
+              "version": "[10.0.20, )"
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
+<<<<<<< HEAD
               "version": "[10.0.2, )",
+=======
+              "version": "[10.0.3, )",
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
               "autoReferenced": true
             },
             "Plugin.Maui.Audio": {
@@ -112,7 +146,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -388,7 +426,11 @@
             "System.Xml.XPath.XDocument": "(,5.0.32767]"
           }
         },
+<<<<<<< HEAD
         "net10.0-ios26.1": {
+=======
+        "net10.0-ios26.2": {
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
           "targetAlias": "net10.0-ios",
           "dependencies": {
             "CommunityToolkit.Mvvm": {
@@ -401,12 +443,20 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[10.0.1, )"
+=======
+              "version": "[10.0.20, )"
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
+<<<<<<< HEAD
               "version": "[10.0.2, )",
+=======
+              "version": "[10.0.3, )",
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
               "autoReferenced": true
             },
             "Plugin.Maui.Audio": {
@@ -436,7 +486,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -712,7 +766,11 @@
             "System.Xml.XPath.XDocument": "(,5.0.32767]"
           }
         },
+<<<<<<< HEAD
         "net10.0-maccatalyst26.1": {
+=======
+        "net10.0-maccatalyst26.2": {
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
           "targetAlias": "net10.0-maccatalyst",
           "dependencies": {
             "CommunityToolkit.Mvvm": {
@@ -725,12 +783,20 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[10.0.1, )"
+=======
+              "version": "[10.0.20, )"
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
+<<<<<<< HEAD
               "version": "[10.0.2, )",
+=======
+              "version": "[10.0.3, )",
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
               "autoReferenced": true
             },
             "Plugin.Maui.Audio": {
@@ -761,7 +827,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1050,7 +1120,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[10.0.1, )"
+=======
+              "version": "[10.0.20, )"
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
             },
             "Plugin.Maui.Audio": {
               "target": "Package",
@@ -1082,7 +1156,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

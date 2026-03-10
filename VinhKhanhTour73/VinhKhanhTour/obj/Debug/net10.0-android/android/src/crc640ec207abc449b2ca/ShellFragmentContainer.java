@@ -12,7 +12,10 @@ public class ShellFragmentContainer
 		__md_methods = 
 			"n_onCreateView:(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;:GetOnCreateView_Landroid_view_LayoutInflater_Landroid_view_ViewGroup_Landroid_os_Bundle_Handler\n" +
 			"n_onDestroyView:()V:GetOnDestroyViewHandler\n" +
+<<<<<<< HEAD
 			"n_onDestroy:()V:GetOnDestroyHandler\n" +
+=======
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
 			"";
 		mono.android.Runtime.register ("Microsoft.Maui.Controls.Platform.Compatibility.ShellFragmentContainer, Microsoft.Maui.Controls", ShellFragmentContainer.class, __md_methods);
 	}
@@ -47,6 +50,7 @@ public class ShellFragmentContainer
 
 	private native void n_onDestroyView ();
 
+<<<<<<< HEAD
 	public void onDestroy ()
 	{
 		n_onDestroy ();
@@ -54,6 +58,8 @@ public class ShellFragmentContainer
 
 	private native void n_onDestroy ();
 
+=======
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\obj\Debug\net10.0-android\lp\164\jl\res\anim\enterfromleft.xml
 D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\obj\Debug\net10.0-android\lp\164\jl\res\anim\enterfromright.xml
 D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\obj\Debug\net10.0-android\lp\164\jl\res\anim\exittoleft.xml
@@ -5,3 +6,12 @@ D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\o
 D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\obj\Debug\net10.0-android\lp\164\jl\res\layout\flyoutcontent.xml
 D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\obj\Debug\net10.0-android\lp\164\jl\res\layout\shellcontent.xml
 D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\obj\Debug\net10.0-android\lp\164\jl\res\values\strings.xml
+=======
+﻿D:\C#\VinhKhanhTour\VinhKhanhTour\obj\Debug\net10.0-android\lp\164\jl\res\anim\enterfromleft.xml
+D:\C#\VinhKhanhTour\VinhKhanhTour\obj\Debug\net10.0-android\lp\164\jl\res\anim\enterfromright.xml
+D:\C#\VinhKhanhTour\VinhKhanhTour\obj\Debug\net10.0-android\lp\164\jl\res\anim\exittoleft.xml
+D:\C#\VinhKhanhTour\VinhKhanhTour\obj\Debug\net10.0-android\lp\164\jl\res\anim\exittoright.xml
+D:\C#\VinhKhanhTour\VinhKhanhTour\obj\Debug\net10.0-android\lp\164\jl\res\layout\flyoutcontent.xml
+D:\C#\VinhKhanhTour\VinhKhanhTour\obj\Debug\net10.0-android\lp\164\jl\res\layout\shellcontent.xml
+D:\C#\VinhKhanhTour\VinhKhanhTour\obj\Debug\net10.0-android\lp\164\jl\res\values\strings.xml
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea

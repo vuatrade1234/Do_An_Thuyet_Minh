@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VinhKhanhTour</name>
+    </assembly>
+    <members>
+        <member name="T:VinhKhanhTour.Data.PoiData">
+            <summary>
+            Dữ liệu POI cho Phố Ẩm Thực Vĩnh Khánh — Quận 4, TP.HCM
+            Đường Vĩnh Khánh nổi tiếng với ẩm thực đường phố về đêm
+            </summary>
+        </member>
+        <member name="M:VinhKhanhTour.Services.GpsTrackingService.CalculateDistance(System.Double,System.Double,System.Double,System.Double)">
+            <summary>Tính khoảng cách (meters) giữa 2 tọa độ — Haversine Formula</summary>
+        </member>
+        <member name="T:VinhKhanhTour.ViewModels.MapViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.CurrentLocation">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.currentLocation"/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.AllPoi">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.allPoi"/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.NearestPoi">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.nearestPoi"/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.SelectedPoi">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.selectedPoi"/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.StatusText">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.statusText"/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.IsTracking">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.isTracking"/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.SelectedLanguage">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.selectedLanguage"/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.StartStopText">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.startStopText"/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.MapHtml">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.mapHtml"/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.MapUpdateJs">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.mapUpdateJs"/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.PoiIndexText">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.poiIndexText"/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.SelectedPoiEmoji">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.selectedPoiEmoji"/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.SelectedPoiIndex">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.selectedPoiIndex"/>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.HasPoiInRadius">
+            <inheritdoc cref="F:VinhKhanhTour.ViewModels.MapViewModel.hasPoiInRadius"/>
+        </member>
+        <member name="F:VinhKhanhTour.ViewModels.MapViewModel.startTourCommand">
+            <summary>The backing field for <see cref="P:VinhKhanhTour.ViewModels.MapViewModel.StartTourCommand"/>.</summary>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.StartTourCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:VinhKhanhTour.ViewModels.MapViewModel.StartTourAsync"/>.</summary>
+        </member>
+        <member name="F:VinhKhanhTour.ViewModels.MapViewModel.stopTourCommand">
+            <summary>The backing field for <see cref="P:VinhKhanhTour.ViewModels.MapViewModel.StopTourCommand"/>.</summary>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.StopTourCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:VinhKhanhTour.ViewModels.MapViewModel.StopTour"/>.</summary>
+        </member>
+        <member name="F:VinhKhanhTour.ViewModels.MapViewModel.toggleLanguageCommand">
+            <summary>The backing field for <see cref="P:VinhKhanhTour.ViewModels.MapViewModel.ToggleLanguageCommand"/>.</summary>
+        </member>
+        <member name="P:VinhKhanhTour.ViewModels.MapViewModel.ToggleLanguageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:VinhKhanhTour.ViewModels.MapViewModel.ToggleLanguage"/>.</summary>
+        </member>
+        <member name="T:VinhKhanhTour.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentLocation">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentLocation" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AllPoi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AllPoi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NearestPoi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NearestPoi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedPoi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedPoi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StatusText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StatusText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsTracking">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsTracking" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedLanguage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedLanguage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StartStopText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StartStopText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MapHtml">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MapHtml" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MapUpdateJs">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MapUpdateJs" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PoiIndexText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PoiIndexText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedPoiEmoji">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedPoiEmoji" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedPoiIndex">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedPoiIndex" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HasPoiInRadius">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HasPoiInRadius" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentLocation">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentLocation" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AllPoi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AllPoi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NearestPoi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NearestPoi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedPoi">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedPoi" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StatusText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StatusText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsTracking">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsTracking" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedLanguage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedLanguage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StartStopText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StartStopText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MapHtml">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MapHtml" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MapUpdateJs">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MapUpdateJs" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PoiIndexText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PoiIndexText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedPoiEmoji">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedPoiEmoji" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedPoiIndex">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedPoiIndex" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HasPoiInRadius">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HasPoiInRadius" generated properties.</summary>
+        </member>
+    </members>
+</doc>

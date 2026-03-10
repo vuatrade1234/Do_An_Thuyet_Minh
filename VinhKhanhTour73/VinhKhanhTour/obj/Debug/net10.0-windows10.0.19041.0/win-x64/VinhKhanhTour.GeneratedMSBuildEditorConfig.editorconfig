@@ -21,7 +21,11 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VinhKhanhTour
+<<<<<<< HEAD
 build_property.ProjectDir = D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\
+=======
+build_property.ProjectDir = D:\C#\VinhKhanhTour\VinhKhanhTour\
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTAotExportsEnabled = 
@@ -33,7 +37,11 @@ build_property.CsWinRTUseWindowsUIXamlProjections = false
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
+<<<<<<< HEAD
 [D:/Do_An_Thuyet_Minh-main/Do_An_Thuyet_Minh-main/VinhKhanhTour73/VinhKhanhTour/App.xaml]
+=======
+[D:/C\#/VinhKhanhTour/VinhKhanhTour/App.xaml]
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = VinhKhanhTour.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
@@ -43,7 +51,11 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
+<<<<<<< HEAD
 [D:/Do_An_Thuyet_Minh-main/Do_An_Thuyet_Minh-main/VinhKhanhTour73/VinhKhanhTour/AppShell.xaml]
+=======
+[D:/C\#/VinhKhanhTour/VinhKhanhTour/AppShell.xaml]
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = VinhKhanhTour.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
@@ -53,7 +65,11 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
+<<<<<<< HEAD
 [D:/Do_An_Thuyet_Minh-main/Do_An_Thuyet_Minh-main/VinhKhanhTour73/VinhKhanhTour/Resources/Styles/Colors.xaml]
+=======
+[D:/C\#/VinhKhanhTour/VinhKhanhTour/Resources/Styles/Colors.xaml]
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = VinhKhanhTour.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
@@ -63,7 +79,11 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
+<<<<<<< HEAD
 [D:/Do_An_Thuyet_Minh-main/Do_An_Thuyet_Minh-main/VinhKhanhTour73/VinhKhanhTour/Resources/Styles/Styles.xaml]
+=======
+[D:/C\#/VinhKhanhTour/VinhKhanhTour/Resources/Styles/Styles.xaml]
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = VinhKhanhTour.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
@@ -73,7 +93,11 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
+<<<<<<< HEAD
 [D:/Do_An_Thuyet_Minh-main/Do_An_Thuyet_Minh-main/VinhKhanhTour73/VinhKhanhTour/Views/MapPage.xaml]
+=======
+[D:/C\#/VinhKhanhTour/VinhKhanhTour/Views/MapPage.xaml]
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = VinhKhanhTour.Views.MapPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MapPage.xaml
@@ -83,7 +107,11 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
+<<<<<<< HEAD
 [D:/Do_An_Thuyet_Minh-main/Do_An_Thuyet_Minh-main/VinhKhanhTour73/VinhKhanhTour/Views/PoiDetailPage.xaml]
+=======
+[D:/C\#/VinhKhanhTour/VinhKhanhTour/Views/PoiDetailPage.xaml]
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = VinhKhanhTour.Views.PoiDetailPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\PoiDetailPage.xaml
@@ -93,7 +121,11 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
+<<<<<<< HEAD
 [D:/Do_An_Thuyet_Minh-main/Do_An_Thuyet_Minh-main/VinhKhanhTour73/VinhKhanhTour/Views/PoiListPage.xaml]
+=======
+[D:/C\#/VinhKhanhTour/VinhKhanhTour/Views/PoiListPage.xaml]
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = VinhKhanhTour.Views.PoiListPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\PoiListPage.xaml
@@ -103,7 +135,11 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
+<<<<<<< HEAD
 [D:/Do_An_Thuyet_Minh-main/Do_An_Thuyet_Minh-main/VinhKhanhTour73/VinhKhanhTour/Views/SettingsPage.xaml]
+=======
+[D:/C\#/VinhKhanhTour/VinhKhanhTour/Views/SettingsPage.xaml]
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = VinhKhanhTour.Views.SettingsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\SettingsPage.xaml

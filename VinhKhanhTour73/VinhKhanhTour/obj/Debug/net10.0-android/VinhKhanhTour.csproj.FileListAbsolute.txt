@@ -1621,6 +1621,7 @@ D:\C#\VinhKhanhTour\VinhKhanhTour\obj\Debug\net10.0-android\stamp\_ConvertResour
 D:\C#\VinhKhanhTour\VinhKhanhTour\obj\Debug\net10.0-android\stamp\_GenerateJavaStubs.stamp
 D:\C#\VinhKhanhTour\VinhKhanhTour\obj\Debug\net10.0-android\stamp\_GeneratePackageManagerJava.stamp
 D:\C#\VinhKhanhTour\VinhKhanhTour\obj\Debug\net10.0-android\stamp\_ResolveLibraryProjectImports.stamp
+<<<<<<< HEAD
 D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\bin\Debug\net10.0-android\VinhKhanhTour.runtimeconfig.json
 D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\bin\Debug\net10.0-android\VinhKhanhTour.dll
 D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\bin\Debug\net10.0-android\VinhKhanhTour.pdb
@@ -3242,3 +3243,5 @@ D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\o
 D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\obj\Debug\net10.0-android\stamp\_GenerateJavaStubs.stamp
 D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\obj\Debug\net10.0-android\stamp\_GeneratePackageManagerJava.stamp
 D:\Do_An_Thuyet_Minh-main\Do_An_Thuyet_Minh-main\VinhKhanhTour73\VinhKhanhTour\obj\Debug\net10.0-android\stamp\_ResolveLibraryProjectImports.stamp
+=======
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea

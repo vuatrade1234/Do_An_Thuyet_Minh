@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <api type="debug" assembly-name="VinhKhanhTour" mvid="06f233f6d3e547e894dc282d533c16f8">
+=======
+<api type="debug" assembly-name="VinhKhanhTour" mvid="f0e579cf257841fb8328df1cbd38a259">
+>>>>>>> 1a5c708b30274422a6e570890bcb221361ba65ea
   <java-to-managed>
     <entry java-name="crc646706b708e937a536/MainActivity" managed-name="VinhKhanhTour.MainActivity, VinhKhanhTour" managed-type-token-id="33554443" />
     <entry java-name="crc646706b708e937a536/MainApplication" managed-name="VinhKhanhTour.MainApplication, VinhKhanhTour" managed-type-token-id="33554444" />
