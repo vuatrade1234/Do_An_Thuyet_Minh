@@ -8,15 +8,6 @@
     <Grid RowDefinitions="*, Auto">
         <WebView x:Name="mapRadar" Grid.Row="0" />
 
-        <!-- Ảnh mini ở góc trái bản đồ -->
-        <Border x:Name="imgPopupBorder" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="Start" 
-                Margin="15,15,0,0" WidthRequest="120" HeightRequest="120" 
-                StrokeShape="RoundRectangle 15" IsVisible="False" StrokeThickness="2" Stroke="White">
-            <Border.Shadow>
-                <Shadow Brush="Black" Offset="0,2" Radius="5" Opacity="0.5" />
-            </Border.Shadow>
-            <Image x:Name="imgPopup" Aspect="AspectFill" />
-        </Border>
 
         <Border Grid.Row="1" Margin="10" Padding="15" StrokeShape="RoundRectangle 15" BackgroundColor="White">
             <VerticalStackLayout Spacing="10">
