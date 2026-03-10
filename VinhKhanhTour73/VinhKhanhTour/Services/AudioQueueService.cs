@@ -1,0 +1,80 @@
+﻿using VinhKhanhTour.Models;
+
+namespace VinhKhanhTour.Services;
+
+public class AudioQueueService
+{
+    private readonly TtsService _tts;
+    private readonly Queue<PoiModel> _queue = new();
+    private readonly object _lock = new();
+    private bool _isPlaying;
+    private AppLanguage _language = AppLanguage.Vietnamese;
+    private int _repeatCount => Views.SettingsPage.RepeatCount;
+    private int _cooldownSecs => Views.SettingsPage.CooldownSeconds;
+
+    public AudioQueueService(TtsService tts)
+    {
+        _tts = tts;
+    }
+
+    public void SetLanguage(AppLanguage lang)
+        => _language = lang;
+
+    public void Enqueue(PoiModel poi)
+    {
+        lock (_lock)
+        {
+            // Không thêm nếu đã có trong queue
+            if (_queue.Any(p => p.Id == poi.Id)) return;
+            _queue.Enqueue(poi);
+        }
+
+        if (!_isPlaying)
+            _ = PlayNextAsync();
+    }
+
+    public void StopImmediate()
+    {
+        lock (_lock) { _queue.Clear(); }
+        _tts.StopAsync();
+        _isPlaying = false;
+    }
+
+    public void ClearQueue()
+    {
+        lock (_lock) { _queue.Clear(); }
+        _isPlaying = false;
+    }
+
+    private async Task PlayNextAsync()
+    {
+        _isPlaying = true;
+
+        while (true)
+        {
+            PoiModel? poi;
+            lock (_lock)
+            {
+                if (_queue.Count == 0) break;
+                poi = _queue.Dequeue();
+            }
+
+            if (poi == null) break;
+
+            // Đọc đúng script theo ngôn ngữ
+            var script = poi.LocalizedTtsScript;
+            if (string.IsNullOrEmpty(script)) continue;
+
+            for (int i = 0; i < _repeatCount; i++)
+            {
+                await _tts.SpeakAsync(script);
+                if (i < _repeatCount - 1)
+                    await Task.Delay(1000);
+            }
+
+            await Task.Delay(_cooldownSecs * 1000);
+        }
+
+        _isPlaying = false;
+    }
+}
