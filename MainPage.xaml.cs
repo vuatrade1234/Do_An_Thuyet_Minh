@@ -3,7 +3,6 @@ using SQLite;
 using VinhKhanhTour.Models;
 using Microsoft.Maui.Devices.Sensors;
 using Microsoft.Maui.Media;
-using System.Threading;
 
 namespace VinhKhanhTour;
 
