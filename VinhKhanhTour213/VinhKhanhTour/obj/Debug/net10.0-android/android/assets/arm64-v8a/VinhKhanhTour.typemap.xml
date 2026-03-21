@@ -1,0 +1,12 @@
+<api type="debug" assembly-name="VinhKhanhTour" mvid="13ef08589246418a8042d8937fc60232">
+  <java-to-managed>
+    <entry java-name="crc646706b708e937a536/MainActivity" managed-name="VinhKhanhTour.MainActivity, VinhKhanhTour" managed-type-token-id="33554445" />
+    <entry java-name="crc646706b708e937a536/MainApplication" managed-name="VinhKhanhTour.MainApplication, VinhKhanhTour" managed-type-token-id="33554446" />
+    <entry java-name="crc64748a516b29ba5aaa/GpsBackgroundService" managed-name="VinhKhanhTour.Platforms.Android.GpsBackgroundService, VinhKhanhTour" managed-type-token-id="33554463" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="crc646706b708e937a536/MainActivity" managed-name="VinhKhanhTour.MainActivity, VinhKhanhTour" managed-type-token-id="33554445" />
+    <entry java-name="crc646706b708e937a536/MainApplication" managed-name="VinhKhanhTour.MainApplication, VinhKhanhTour" managed-type-token-id="33554446" />
+    <entry java-name="crc64748a516b29ba5aaa/GpsBackgroundService" managed-name="VinhKhanhTour.Platforms.Android.GpsBackgroundService, VinhKhanhTour" managed-type-token-id="33554463" />
+  </managed-to-java>
+</api>

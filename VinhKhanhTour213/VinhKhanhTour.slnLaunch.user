@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "..\\..\\Projects\\VinhKhanhTour\\VinhKhanhTour.Api\\VinhKhanhTour.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\..\\Projects\\VinhKhanhTour\\VinhKhanhTour.CMS\\VinhKhanhTour.CMS.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
