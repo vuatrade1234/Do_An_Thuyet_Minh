@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VinhKhanhTour.Views.SettingsPage"
+             BackgroundColor="#F0F4FF"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- Header -->
+        <Grid Grid.Row="0" BackgroundColor="#1A237E" Padding="16,14">
+            <Label x:Name="LblPageTitle" Text="⚙️ Cài đặt"
+                   TextColor="White" FontSize="16" FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+        </Grid>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="16" Spacing="14">
+
+                <!-- TTS -->
+                <Label x:Name="LblTtsSection" Text="🎙 Text-to-Speech"
+                       FontSize="16" FontAttributes="Bold" TextColor="#1A237E"/>
+                <Border BackgroundColor="White" Padding="16" StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="14"/>
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="14">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label x:Name="LblAutoSpeak" Grid.Column="0"
+                                   Text="Tự động thuyết minh"
+                                   FontSize="14" VerticalOptions="Center"/>
+                            <Switch Grid.Column="1" x:Name="AutoSpeakSwitch"
+                                    IsToggled="True" OnColor="#1A237E"/>
+                        </Grid>
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label x:Name="LblVolumeTitle" Grid.Column="0" Text="Âm lượng"
+                                   FontSize="14" VerticalOptions="Center"/>
+                            <Label Grid.Column="1" x:Name="LblVolume"
+                                   Text="100%" FontSize="13" TextColor="#1A237E"/>
+                        </Grid>
+                        <Slider x:Name="VolumeSlider" Minimum="0" Maximum="100" Value="100"
+                                ThumbColor="#1A237E" MinimumTrackColor="#1A237E"
+                                ValueChanged="OnVolumeChanged"/>
+                        <Button x:Name="BtnTestTts" Text="▶ Thử TTS"
+                                BackgroundColor="#1A237E" TextColor="White"
+                                CornerRadius="10" HeightRequest="44"
+                                Clicked="OnTestTtsClicked"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Tốc độ đọc -->
+                <Label x:Name="LblSpeedSection" Text="⚡ Tốc độ đọc"
+                       FontSize="16" FontAttributes="Bold" TextColor="#1A237E"/>
+                <Border BackgroundColor="White" Padding="16" StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="14"/>
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="14">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label x:Name="LblSpeedTitle" Grid.Column="0"
+                                   Text="Tốc độ giọng đọc"
+                                   FontSize="14" VerticalOptions="Center"/>
+                            <Border Grid.Column="1" BackgroundColor="#E8EAF6"
+                                    Padding="12,6" StrokeThickness="0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="8"/>
+                                </Border.StrokeShape>
+                                <Label x:Name="LblSpeechRate" Text="🚶 Bình thường"
+                                       FontSize="13" FontAttributes="Bold" TextColor="#1A237E"/>
+                            </Border>
+                        </Grid>
+                        <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="6">
+                            <Button x:Name="BtnSlow"     Grid.Column="0" Text="🐢 Chậm"
+                                    CornerRadius="8" FontSize="11" HeightRequest="36"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    Clicked="OnSlowClicked"/>
+                            <Button x:Name="BtnNormal"   Grid.Column="1" Text="🚶 Thường"
+                                    CornerRadius="8" FontSize="11" HeightRequest="36"
+                                    BackgroundColor="#1A237E" TextColor="White"
+                                    Clicked="OnNormalClicked"/>
+                            <Button x:Name="BtnFast"     Grid.Column="2" Text="🚴 Nhanh"
+                                    CornerRadius="8" FontSize="11" HeightRequest="36"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    Clicked="OnFastClicked"/>
+                            <Button x:Name="BtnVeryFast" Grid.Column="3" Text="🚀 Rất nhanh"
+                                    CornerRadius="8" FontSize="11" HeightRequest="36"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    Clicked="OnVeryFastClicked"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Số lần đọc lại -->
+                <Label x:Name="LblRepeatSection" Text="🔁 Số lần đọc lại"
+                       FontSize="16" FontAttributes="Bold" TextColor="#1A237E"/>
+                <Border BackgroundColor="White" Padding="16" StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="14"/>
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="14">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label x:Name="LblRepeatTitle" Grid.Column="0"
+                                   Text="Số lần đọc mỗi POI"
+                                   FontSize="14" VerticalOptions="Center"/>
+                            <Border Grid.Column="1" BackgroundColor="#E8EAF6"
+                                    Padding="12,6" StrokeThickness="0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="8"/>
+                                </Border.StrokeShape>
+                                <Label x:Name="LblRepeat" Text="1 lần"
+                                       FontSize="14" FontAttributes="Bold" TextColor="#1A237E"/>
+                            </Border>
+                        </Grid>
+                        <Grid ColumnDefinitions="*,*,*,*,*" ColumnSpacing="6">
+                            <Button x:Name="BtnR1" Grid.Column="0" Text="1x"
+                                    CornerRadius="8" FontSize="12" HeightRequest="36"
+                                    BackgroundColor="#1A237E" TextColor="White"
+                                    Clicked="OnRepeat1Clicked"/>
+                            <Button x:Name="BtnR2" Grid.Column="1" Text="2x"
+                                    CornerRadius="8" FontSize="12" HeightRequest="36"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    Clicked="OnRepeat2Clicked"/>
+                            <Button x:Name="BtnR3" Grid.Column="2" Text="3x"
+                                    CornerRadius="8" FontSize="12" HeightRequest="36"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    Clicked="OnRepeat3Clicked"/>
+                            <Button x:Name="BtnR4" Grid.Column="3" Text="4x"
+                                    CornerRadius="8" FontSize="12" HeightRequest="36"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    Clicked="OnRepeat4Clicked"/>
+                            <Button x:Name="BtnR5" Grid.Column="4" Text="5x"
+                                    CornerRadius="8" FontSize="12" HeightRequest="36"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    Clicked="OnRepeat5Clicked"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Cooldown — thêm nút 3s -->
+                <Label x:Name="LblCooldownSection" Text="⏱ Thời gian chờ giữa POI"
+                       FontSize="16" FontAttributes="Bold" TextColor="#1A237E"/>
+                <Border BackgroundColor="White" Padding="16" StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="14"/>
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="14">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label x:Name="LblCooldownTitle" Grid.Column="0"
+                                   Text="Cooldown sau khi đọc xong"
+                                   FontSize="14" VerticalOptions="Center"/>
+                            <Border Grid.Column="1" BackgroundColor="#E8EAF6"
+                                    Padding="12,6" StrokeThickness="0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="8"/>
+                                </Border.StrokeShape>
+                                <Label x:Name="LblCooldown" Text="10s"
+                                       FontSize="14" FontAttributes="Bold" TextColor="#1A237E"/>
+                            </Border>
+                        </Grid>
+                        <!-- 5 nút: 3s / 10s / 30s / 60s / 120s -->
+                        <Grid ColumnDefinitions="*,*,*,*,*" ColumnSpacing="6">
+                            <Button x:Name="BtnC3"   Grid.Column="0" Text="3s"
+                                    CornerRadius="8" FontSize="12" HeightRequest="36"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    Clicked="OnCooldown3Clicked"/>
+                            <Button x:Name="BtnC10"  Grid.Column="1" Text="10s"
+                                    CornerRadius="8" FontSize="12" HeightRequest="36"
+                                    BackgroundColor="#1A237E" TextColor="White"
+                                    Clicked="OnCooldown10Clicked"/>
+                            <Button x:Name="BtnC30"  Grid.Column="2" Text="30s"
+                                    CornerRadius="8" FontSize="12" HeightRequest="36"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    Clicked="OnCooldown30Clicked"/>
+                            <Button x:Name="BtnC60"  Grid.Column="3" Text="60s"
+                                    CornerRadius="8" FontSize="12" HeightRequest="36"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    Clicked="OnCooldown60Clicked"/>
+                            <Button x:Name="BtnC120" Grid.Column="4" Text="120s"
+                                    CornerRadius="8" FontSize="12" HeightRequest="36"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    Clicked="OnCooldown120Clicked"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Bán kính -->
+                <Label x:Name="LblRadiusSection" Text="📡 Bán kính kích hoạt"
+                       FontSize="16" FontAttributes="Bold" TextColor="#1A237E"/>
+                <Border BackgroundColor="White" Padding="16" StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="14"/>
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="14">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <Label x:Name="LblRadiusTitle" Grid.Column="0"
+                                   Text="Bán kính đọc thuyết minh"
+                                   FontSize="14" VerticalOptions="Center"/>
+                            <Border Grid.Column="1" BackgroundColor="#E8EAF6"
+                                    Padding="12,6" StrokeThickness="0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="8"/>
+                                </Border.StrokeShape>
+                                <Label x:Name="LblRadius" Text="30m"
+                                       FontSize="14" FontAttributes="Bold" TextColor="#1A237E"/>
+                            </Border>
+                        </Grid>
+                        <Slider x:Name="RadiusSlider" Minimum="10" Maximum="100" Value="30"
+                                ThumbColor="#1A237E" MinimumTrackColor="#1A237E"
+                                ValueChanged="OnRadiusChanged"/>
+                        <Grid ColumnDefinitions="*,*,*" ColumnSpacing="6">
+                            <Button x:Name="BtnRad10" Grid.Column="0" Text="10m"
+                                    CornerRadius="8" FontSize="12" HeightRequest="36"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    Clicked="OnRadius10Clicked"/>
+                            <Button x:Name="BtnRad30" Grid.Column="1" Text="30m"
+                                    CornerRadius="8" FontSize="12" HeightRequest="36"
+                                    BackgroundColor="#1A237E" TextColor="White"
+                                    Clicked="OnRadius30Clicked"/>
+                            <Button x:Name="BtnRad50" Grid.Column="2" Text="50m"
+                                    CornerRadius="8" FontSize="12" HeightRequest="36"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    Clicked="OnRadius50Clicked"/>
+                        </Grid>
+                        <Label x:Name="LblHint"
+                               Text="💡 2 POI giao nhau → ưu tiên POI gần nhất&#10;   Ra khỏi bán kính → dừng đọc ngay"
+                               FontSize="11" TextColor="#999" LineHeight="1.5"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Ngôn ngữ — đủ 5 ngôn ngữ -->
+                <Label x:Name="LblLangSection" Text="🌐 Ngôn ngữ"
+                       FontSize="16" FontAttributes="Bold" TextColor="#1A237E"/>
+                <Border BackgroundColor="White" Padding="16" StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="14"/>
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="10">
+                        <!-- Hàng 1: VI / EN / ZH -->
+                        <Grid ColumnDefinitions="*,*,*" ColumnSpacing="8">
+                            <Button x:Name="BtnVi" Grid.Column="0" Text="🇻🇳 Việt"
+                                    BackgroundColor="#DA251D" TextColor="White"
+                                    CornerRadius="10" HeightRequest="44" FontSize="12"
+                                    Clicked="OnViClicked"/>
+                            <Button x:Name="BtnEn" Grid.Column="1" Text="🇬🇧 English"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    CornerRadius="10" HeightRequest="44" FontSize="12"
+                                    Clicked="OnEnClicked"/>
+                            <Button x:Name="BtnZh" Grid.Column="2" Text="🇨🇳 中文"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    CornerRadius="10" HeightRequest="44" FontSize="12"
+                                    Clicked="OnZhClicked"/>
+                        </Grid>
+                        <!-- Hàng 2: JA / KO -->
+                        <Grid ColumnDefinitions="*,*" ColumnSpacing="8">
+                            <Button x:Name="BtnJa" Grid.Column="0" Text="🇯🇵 日本語"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    CornerRadius="10" HeightRequest="44" FontSize="12"
+                                    Clicked="OnJaClicked"/>
+                            <Button x:Name="BtnKo" Grid.Column="1" Text="🇰🇷 한국어"
+                                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                                    CornerRadius="10" HeightRequest="44" FontSize="12"
+                                    Clicked="OnKoClicked"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,30 @@
+<api>
+  <jcw-types>
+    <type name="MainActivity" package="crc646706b708e937a536" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc6488302ad6e9e4df1a.MauiAppCompatActivity" partial_assembly_qualified_name="VinhKhanhTour.MainActivity, VinhKhanhTour">
+      <constructors>
+        <constructor name="MainActivity" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
+        <constructor name="MainActivity" method="n_.ctor:(I)V:" jni_signature="(I)V" managed_parameters="System.Int32, System.Private.CoreLib" params="int p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
+      </constructors>
+      <methods>
+        <method name="onNewIntent" method="n_onNewIntent:(Landroid/content/Intent;)V:GetOnNewIntent_Landroid_content_Intent_Handler" jni_signature="(Landroid/content/Intent;)V" params="android.content.Intent p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
+        <method name="onCreate" method="n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler" jni_signature="(Landroid/os/Bundle;)V" params="android.os.Bundle p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
+      </methods>
+    </type>
+    <type name="MainApplication" package="crc646706b708e937a536" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc6488302ad6e9e4df1a.MauiApplication" is_application="True" partial_assembly_qualified_name="VinhKhanhTour.MainApplication, VinhKhanhTour" application_constructor="MainApplication" />
+    <type name="GpsBackgroundService" package="crc64748a516b29ba5aaa" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.app.Service" partial_assembly_qualified_name="VinhKhanhTour.Platforms.Android.GpsBackgroundService, VinhKhanhTour">
+      <constructors>
+        <constructor name="GpsBackgroundService" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
+      </constructors>
+      <methods>
+        <method name="onBind" method="n_onBind:(Landroid/content/Intent;)Landroid/os/IBinder;:GetOnBind_Landroid_content_Intent_Handler" jni_signature="(Landroid/content/Intent;)Landroid/os/IBinder;" params="android.content.Intent p0" retval="android.os.IBinder" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
+        <method name="onStartCommand" method="n_onStartCommand:(Landroid/content/Intent;II)I:GetOnStartCommand_Landroid_content_Intent_IIHandler" jni_signature="(Landroid/content/Intent;II)I" params="android.content.Intent p0, int p1, int p2" retval="int" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
+        <method name="onDestroy" method="n_onDestroy:()V:GetOnDestroyHandler" jni_signature="()V" retval="void" is_dynamically_registered="True" />
+      </methods>
+    </type>
+  </jcw-types>
+  <acw-types partial-assembly-name="VinhKhanhTour" module-name="VinhKhanhTour.dll">
+    <type assembly-qualified-name="VinhKhanhTour.MainActivity, VinhKhanhTour, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" compat-jni-name="vinhkhanhtour.MainActivity" java-key="crc646706b708e937a536.MainActivity" managed-key="VinhKhanhTour.MainActivity" partial-assembly-qualified-name="VinhKhanhTour.MainActivity, VinhKhanhTour" />
+    <type assembly-qualified-name="VinhKhanhTour.MainApplication, VinhKhanhTour, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" compat-jni-name="vinhkhanhtour.MainApplication" java-key="crc646706b708e937a536.MainApplication" managed-key="VinhKhanhTour.MainApplication" partial-assembly-qualified-name="VinhKhanhTour.MainApplication, VinhKhanhTour" />
+    <type assembly-qualified-name="VinhKhanhTour.Platforms.Android.GpsBackgroundService, VinhKhanhTour, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" compat-jni-name="vinhkhanhtour.platforms.android.GpsBackgroundService" java-key="crc64748a516b29ba5aaa.GpsBackgroundService" managed-key="VinhKhanhTour.Platforms.Android.GpsBackgroundService" partial-assembly-qualified-name="VinhKhanhTour.Platforms.Android.GpsBackgroundService, VinhKhanhTour" />
+  </acw-types>
+</api>

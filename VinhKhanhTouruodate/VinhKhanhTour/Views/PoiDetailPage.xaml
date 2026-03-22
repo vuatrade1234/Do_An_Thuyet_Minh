@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VinhKhanhTour.Views.PoiDetailPage"
+             BackgroundColor="#F0F4FF"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- Header -->
+        <Grid Grid.Row="0" BackgroundColor="#1A237E" Padding="12,14"
+              ColumnDefinitions="Auto,*,Auto">
+            <Button Grid.Column="0" Text="←"
+                    Clicked="OnBackClicked"
+                    BackgroundColor="Transparent" TextColor="White"
+                    FontSize="20" Padding="4,0" WidthRequest="40"/>
+            <Label Grid.Column="1" x:Name="LblTitle"
+                   Text="Chi tiết điểm tham quan"
+                   TextColor="White" FontSize="16" FontAttributes="Bold"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Grid.Column="2" x:Name="BtnNavigateHeader"
+                    Text="🧭"
+                    Clicked="OnNavigateClicked"
+                    BackgroundColor="#3949AB" TextColor="White"
+                    FontSize="16" Padding="8,4" CornerRadius="8"/>
+        </Grid>
+
+        <!-- Content -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="0">
+
+                <!-- Ảnh bìa + tên -->
+                <Grid HeightRequest="240">
+                    <Image x:Name="CoverImg"
+                           Aspect="AspectFill" HeightRequest="240"/>
+                    <BoxView BackgroundColor="#CC000000"
+                             VerticalOptions="End" HeightRequest="100"/>
+                    <VerticalStackLayout VerticalOptions="End"
+                                         Padding="16,0,16,16">
+                        <Label x:Name="LblPoiName"
+                               FontSize="22" FontAttributes="Bold"
+                               TextColor="White"
+                               LineBreakMode="WordWrap"/>
+                        <HorizontalStackLayout Spacing="6" Margin="0,4,0,0">
+                            <Label x:Name="LblCategoryEmoji"
+                                   FontSize="16" VerticalOptions="Center"/>
+                            <Label x:Name="LblCategoryLabel"
+                                   FontSize="13" TextColor="#FFD54F"
+                                   VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Grid>
+
+                <!-- Stats: khoảng cách + bán kính -->
+                <Grid ColumnDefinitions="*,*" Margin="16,16,16,0"
+                      ColumnSpacing="12">
+                    <Border Grid.Column="0" BackgroundColor="White"
+                            Padding="14,12" StrokeThickness="0">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="14"/>
+                        </Border.StrokeShape>
+                        <Border.Shadow>
+                            <Shadow Brush="Black" Opacity="0.08" Radius="6"/>
+                        </Border.Shadow>
+                        <VerticalStackLayout HorizontalOptions="Center" Spacing="4">
+                            <Label x:Name="LblDistanceTitle"
+                                   Text="📏 Khoảng cách"
+                                   FontSize="11" TextColor="#888"
+                                   HorizontalOptions="Center"/>
+                            <Label x:Name="LblDistance"
+                                   Text="--m"
+                                   FontSize="20" FontAttributes="Bold"
+                                   TextColor="#E65100"
+                                   HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border Grid.Column="1" BackgroundColor="White"
+                            Padding="14,12" StrokeThickness="0">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="14"/>
+                        </Border.StrokeShape>
+                        <Border.Shadow>
+                            <Shadow Brush="Black" Opacity="0.08" Radius="6"/>
+                        </Border.Shadow>
+                        <VerticalStackLayout HorizontalOptions="Center" Spacing="4">
+                            <Label x:Name="LblRadiusTitle"
+                                   Text="🎯 Vùng kích hoạt"
+                                   FontSize="11" TextColor="#888"
+                                   HorizontalOptions="Center"/>
+                            <Label x:Name="LblRadius"
+                                   Text="30m"
+                                   FontSize="20" FontAttributes="Bold"
+                                   TextColor="#E65100"
+                                   HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+
+                <!-- Giới thiệu -->
+                <VerticalStackLayout Margin="16,20,16,0" Spacing="8">
+                    <Label x:Name="LblIntroTitle"
+                           Text="📖 Giới thiệu"
+                           FontSize="16" FontAttributes="Bold"
+                           TextColor="#1A237E"/>
+                    <Border BackgroundColor="White" Padding="14"
+                            StrokeThickness="0">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="14"/>
+                        </Border.StrokeShape>
+                        <Border.Shadow>
+                            <Shadow Brush="Black" Opacity="0.08" Radius="6"/>
+                        </Border.Shadow>
+                        <Label x:Name="LblDescription"
+                               FontSize="14" TextColor="#444"
+                               LineHeight="1.6"/>
+                    </Border>
+                </VerticalStackLayout>
+
+                <!-- Nội dung thuyết minh -->
+                <VerticalStackLayout Margin="16,20,16,24" Spacing="8">
+                    <Label x:Name="LblTtsTitle"
+                           Text="🎙 Nội dung thuyết minh"
+                           FontSize="16" FontAttributes="Bold"
+                           TextColor="#1A237E"/>
+                    <!-- Fix: StrokeColor → Border.Stroke -->
+                    <Border BackgroundColor="#FFF8E1" Padding="14"
+                            StrokeThickness="1">
+                        <Border.Stroke>
+                            <SolidColorBrush Color="#FFE082"/>
+                        </Border.Stroke>
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="14"/>
+                        </Border.StrokeShape>
+                        <Label x:Name="LblTtsScript"
+                               FontSize="13" TextColor="#5D4037"
+                               FontAttributes="Italic"
+                               LineHeight="1.7"/>
+                    </Border>
+                </VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Bottom buttons -->
+        <Grid Grid.Row="2" ColumnDefinitions="*,*"
+              Padding="16,12" ColumnSpacing="12"
+              BackgroundColor="White">
+            <Grid.Shadow>
+                <Shadow Brush="Black" Opacity="0.1" Radius="8"/>
+            </Grid.Shadow>
+            <Button Grid.Column="0" x:Name="BtnListen"
+                    Text="🎧 Nghe thuyết minh"
+                    Clicked="OnListenClicked"
+                    BackgroundColor="#E65100" TextColor="White"
+                    FontSize="13" FontAttributes="Bold"
+                    HeightRequest="50" CornerRadius="14"/>
+            <Button Grid.Column="1" x:Name="BtnBackMap"
+                    Text="🗺 Quay lại bản đồ"
+                    Clicked="OnBackMapClicked"
+                    BackgroundColor="#E8EAF6" TextColor="#1A237E"
+                    FontSize="13" FontAttributes="Bold"
+                    HeightRequest="50" CornerRadius="14"/>
+        </Grid>
+
+    </Grid>
+</ContentPage>
