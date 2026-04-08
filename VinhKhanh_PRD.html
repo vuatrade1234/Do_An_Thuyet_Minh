@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài liệu Đặc tả Sản phẩm - VinhKhanh Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --secondary: #475569;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 300px;
+            background: var(--card-bg);
+            height: 100vh;
+            border-right: 1px solid var(--border);
+            position: fixed;
+            padding: 2rem 1.5rem;
+            overflow-y: auto;
+            z-index: 100;
+        }
+
+        .sidebar h2 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 500;
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: var(--primary-light);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 300px;
+            padding: 3rem 4rem;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        /* Header Title */
+        .page-header {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+
+        .page-header p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        h2.section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            scroll-margin-top: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        ul,
+        ol {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+            color: var(--secondary);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Meta Info Card */
+        .meta-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .student-team-card {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .student-team-card h4 {
+            color: #166534;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #bbf7d0;
+            padding-bottom: 0.75rem;
+        }
+
+        .student-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .student-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 1.05rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Database Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: #f1f5f9;
+            font-weight: 600;
+            color: var(--secondary);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Tags */
+        .tags {
+            margin-top: 1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.35rem 0.85rem;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tag.success {
+            background: #d1fae5;
+            color: #047857;
+        }
+
+        .tag.warning {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .tag.danger {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+        /* Mermaid Wrapper */
+        .mermaid-wrapper {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mermaid {
+            background-color: transparent !important;
+        }
+
+        /* Info box */
+        .info-box {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary);
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .info-box.warning {
+            background: #fef3c7;
+            border-left-color: var(--warning);
+        }
+
+        .info-box h4 {
+            margin-top: 0;
+            color: var(--text-main);
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="sidebar">
+        <h2>🧭 VinhKhanh Tour</h2>
+        <ul>
+            <li><a href="#overview" class="active">1. Tổng quan dự án</a></li>
+            <li><a href="#objectives">2. Mục tiêu & Chỉ số</a></li>
+            <li><a href="#target">3. Đối tượng & Hành trình</a></li>
+            <li><a href="#architecture">4. Kiến trúc hệ thống</a></li>
+            <li><a href="#features">5. Tính năng chi tiết</a></li>
+            <li><a href="#data-model">6. Cách hệ thống ghi nhớ</a></li>
+            <li><a href="#non-functional">7. Tiêu chuẩn vận hành</a></li>
+            <li><a href="#roadmap">8. Lộ trình phát triển</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Tài liệu Đặc tả Sản phẩm (PRD)</h1>
+            <p class="subtitle">Dự án: Trợ lý du lịch thông minh VinhKhanh Tour (CMS & Mobile App)</p>
+        </header>
+
+        <div class="meta-card">
+            <div class="meta-item">
+                <span class="meta-label">Nền tảng</span>
+                <span class="meta-value">Ứng dụng di động & Trang quản trị nội dung</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Công nghệ cốt lõi</span>
+                <span class="meta-value">C# .NET, Google Firestore</span>
+            </div>
+        </div>
+
+        <div class="student-team-card">
+            <h4>Nhóm Thực Hiện Nghiên Cứu</h4>
+            <div class="student-row">
+                <div class="meta-item">
+                    <span class="meta-label" style="color: #166534;">Thành viên thực hiện</span>
+                    <span class="meta-value" style="color: #14532d;">Nguyễn Trung Nghĩa (3123411197)</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label" style="color: #166534;">Thành viên thực hiện</span>
+                    <span class="meta-value" style="color: #14532d;">Lê Hoàng Giang (3123411077)</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="overview">
+            <h2 class="section-title">1. Tổng quan & Bối cảnh (Background & Overview)</h2>
+            <p><strong>VinhKhanh Tour</strong> là giải pháp số hóa trải nghiệm du lịch tại các khu ẩm thực và nhà hàng. Thay vì phụ thuộc vào hướng dẫn viên hoặc đọc biển báo tĩnh, du khách có thể tự khám phá câu chuyện phía sau mỗi địa danh ngay trên điện thoại của mình.</p>
+            <p><strong>Vấn đề cần giải quyết:</strong></p>
+            <ul>
+                <li>Khách đi tự túc thường thiếu thông tin chuyên sâu về điểm đến.</li>
+                <li>Biển báo thông tin vật lý thường đơn điệu và khó tiếp cận với khách quốc tế.</li>
+                <li>Ban quản lý thiếu dữ liệu thực tế về sở thích khách hàng để cải thiện dịch vụ.</li>
+            </ul>
+        </section>
+
+        <section id="objectives">
+            <h2 class="section-title">2. Mục tiêu & Chỉ số đo lường (Objectives & KPIs)</h2>
+
+            <h3>Mục tiêu chính</h3>
+            <ul>
+                <li><strong>Nâng tầm trải nghiệm:</strong> Cung cấp thông tin thuyết minh tự động (Audio Guide) đa ngôn ngữ, hướng tới làm hài lòng 80% du khách.</li>
+                <li><strong>Thấu hiểu khách hàng:</strong> Thu thập dữ liệu di chuyển ẩn danh để tối ưu hóa lộ trình và không gian quán.</li>
+                <li><strong>Tiết kiệm vận hành:</strong> Cập nhật thông tin tức thì qua trang quản lý (CMS) mà không cần thay mới biển báo vật lý.</li>
+            </ul>
+
+            <h3>Chỉ số đo lường hiệu quả (KPIs)</h3>
+            <ul>
+                <li><strong>Độ phủ:</strong> Ít nhất 40% khách tham quan sử dụng ứng dụng hoặc quét mã QR.</li>
+                <li><strong>Độ tương tác:</strong> Người dùng nghe hoặc xem hơn 60% thời lượng thông tin tại mỗi điểm dừng.</li>
+                <li><strong>Độ ổn định:</strong> Hệ thống phản hồi cực nhanh (< 200ms) và hoạt động suốt 99.9% thời gian.</li>
+            </ul>
+        </section>
+
+        <section id="target">
+            <h2 class="section-title">3. Đối tượng & Hành trình</h2>
+
+            <h3>3.1. Chân dung người dùng</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎒</div>
+                    <h3>Du khách (Người dùng cuối)</h3>
+                    <p><strong>Nhu cầu:</strong> Muốn tự do khám phá ẩm thực theo cách riêng. Cần thông tin nhanh qua QR và ứng dụng phải chạy mượt kể cả khi mạng yếu.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍💼</div>
+                    <h3>Quản trị viên (Ban quản lý)</h3>
+                    <p><strong>Nhu cầu:</strong> Cần công cụ dễ dùng để thiết lập các Tour, chỉnh sửa thông tin đa phương tiện và xem báo cáo khách hàng trực quan.</p>
+                </div>
+            </div>
+
+            <h3>3.2. Hành trình trải nghiệm khách hàng</h3>
+            <div class="mermaid-wrapper">
+                <div class="mermaid">
+                    graph TD;
+                    A[Khách đến điểm tham quan] --> B[Quét mã QR / Mở ứng dụng];
+                    B --> C[Chọn ngôn ngữ yêu thích];
+                    C --> D[Xem bản đồ hành trình];
+                    D --> E{Đến gần địa điểm?};
+                    E -- Có --> F[Máy tự phát thuyết minh & hiện ảnh];
+                    F --> G[Khách nghe giới thiệu & tiếp tục di chuyển];
+                    G --> H[Chuyển sang điểm tiếp theo];
+                    H --> E;
+                    E -- Không --> I[Hệ thống lưu dữ liệu để cải thiện dịch vụ];
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture">
+            <h2 class="section-title">4. Kiến trúc Hệ thống (System Architecture)</h2>
+            <p>Hệ thống được thiết kế theo mô hình hiện đại, giúp phân tách rõ giữa phần quản lý nội dung và ứng dụng dành cho khách hàng.</p>
+
+            <div class="mermaid-wrapper">
+                <div class="mermaid">
+                    flowchart LR
+                    subgraph client [Giao diện người dùng]
+                        mobile[Ứng dụng di động]
+                        cms[Trang quản lý nội dung]
+                    end
+
+                    subgraph backend [Dịch vụ xử lý]
+                        t_api[.NET Core API]
+                        auth[Xác thực bảo mật]
+                    end
+
+                    subgraph db [Kho lưu trữ]
+                        fstore[(Dữ liệu văn bản)]
+                        storage[(Dữ liệu Ảnh/Âm thanh)]
+                    end
+
+                    mobile --> t_api
+                    cms --> t_api
+                    cms --> auth
+                    t_api --> fstore
+                    t_api --> storage
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>Công nghệ triển khai:</h4>
+                <p><strong>Hệ thống xử lý:</strong> C# .NET 8, đảm bảo tốc độ và tính bảo mật cao.</p>
+                <p><strong>Lưu trữ thông minh:</strong> Google Firestore giúp cập nhật dữ liệu tức thì; Firebase Storage dùng để lưu trữ các file âm thanh và hình ảnh chất lượng.</p>
+                <p><strong>Ứng dụng di động:</strong> Phát triển đa nền tảng, hoạt động mượt mà trên cả iPhone và điện thoại Android.</p>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2 class="section-title">5. Tính năng chi tiết (Detailed Features)</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Bảo mật & Phân quyền</h3>
+                    <p>Chia rõ quyền giữa người biên tập nội dung và người quản trị. Đảm bảo dữ liệu khách hàng luôn được an toàn tuyệt đối.</p>
+                    <div class="tags">
+                        <span class="tag">Xác thực Firebase</span>
+                        <span class="tag">Phân quyền thông minh</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Bản đồ điểm tham quan (POI)</h3>
+                    <p>Cho phép chọn vị trí trên bản đồ và thiết lập "vùng nhận diện". Khi khách bước vào vùng này, máy sẽ tự động giới thiệu thông tin.</p>
+                    <div class="tags">
+                        <span class="tag">Google Maps API</span>
+                        <span class="tag">Định vị chính xác</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Thiết lập tuyến Tour</h3>
+                    <p>Kết nối các địa danh thành một hành trình kể chuyện hoàn chỉnh. Tự động tạo mã QR riêng cho từng lộ trình để in ấn.</p>
+                    <div class="tags">
+                        <span class="tag success">Tạo mã QR tự động</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Hỗ trợ đa ngôn ngữ</h3>
+                    <p>Linh hoạt thay đổi ngôn ngữ. Nếu thiếu bản dịch tiếng Anh, hệ thống sẽ dùng tiếng Việt làm dự phòng để thông tin không bị ngắt quãng.</p>
+                    <div class="tags">
+                        <span class="tag">Nội dung đa tiếng</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔉</div>
+                    <h3>Tự động thuyết minh</h3>
+                    <p>Sử dụng công nghệ định vị GPS để biết khách đang đứng ở đâu, từ đó gửi thông báo và phát bài nghe giới thiệu một cách tự nhiên.</p>
+                    <div class="tags">
+                        <span class="tag warning">Định vị nền GPS</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Báo cáo & Bản đồ nhiệt</h3>
+                    <p>Ghi nhận dòng người di chuyển để vẽ bản đồ nhiệt. Giúp Ban quản lý biết khu vực nào hấp dẫn nhất để tối ưu hóa không gian.</p>
+                    <div class="tags">
+                        <span class="tag danger">Dữ liệu ẩn danh</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="data-model">
+            <h2 class="section-title">6. Cách hệ thống ghi nhớ (Data Models)</h2>
+            <p>Dữ liệu được tổ chức thông minh để vừa phục vụ tốt cho khách, vừa dễ dàng cho người quản lý.</p>
+
+            <h3>6.1. Quản lý Tuyến hành trình (Tours)</h3>
+            <table>
+                <tr>
+                    <th>Thông tin</th>
+                    <th>Ý nghĩa nghiệp vụ</th>
+                </tr>
+                <tr>
+                    <td>Tên & Mô tả</td>
+                    <td>Lời chào mời và thông tin tóm tắt về hành trình.</td>
+                </tr>
+                <tr>
+                    <td>Ảnh đại diện</td>
+                    <td>Hình ảnh thu hút giúp khách nhận diện Tour.</td>
+                </tr>
+                <tr>
+                    <td>Danh sách điểm dừng</td>
+                    <td>Tập hợp các địa danh mà khách sẽ đi qua.</td>
+                </tr>
+                <tr>
+                    <td>Trạng thái hoạt động</td>
+                    <td>Cho phép bật/tắt Tour trên ứng dụng ngay lập tức.</td>
+                </tr>
+                <tr>
+                    <td>Thống kê lượt quét</td>
+                    <td>Đếm số khách tham gia để đánh giá độ hiệu quả.</td>
+                </tr>
+            </table>
+
+            <h3>6.2. Thông tin chi tiết địa danh (POI)</h3>
+            <table>
+                <tr>
+                    <th>Thông tin</th>
+                    <th>Ý nghĩa nghiệp vụ</th>
+                </tr>
+                <tr>
+                    <td>Tọa độ bản đồ</td>
+                    <td>Xác định vị trí thực tế của địa danh.</td>
+                </tr>
+                <tr>
+                    <td>Vùng nhận diện (m)</td>
+                    <td>Khoảng cách từ địa danh mà máy sẽ bắt đầu phát thuyết minh.</td>
+                </tr>
+                <tr>
+                    <td>Thứ tự giới thiệu</td>
+                    <td>Sắp xếp câu chuyện theo đúng trình tự tham quan.</td>
+                </tr>
+                <tr>
+                    <td>Kho âm thanh/hình ảnh</td>
+                    <td>Chứa các file thuyết minh đa ngôn ngữ tương ứng.</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="non-functional">
+            <h2 class="section-title">7. Tiêu chuẩn vận hành (Non-Functional Requirements)</h2>
+            <ul>
+                <li><strong>An toàn thông tin:</strong> 
+                    <ul>
+                        <li>Chỉ những nhân sự được cấp quyền mới có thể chỉnh sửa nội dung hệ thống.</li>
+                        <li>Dữ liệu trao đổi giữa ứng dụng và máy chủ luôn được mã hóa bảo vệ.</li>
+                    </ul>
+                </li>
+                <li><strong>Tôn trọng quyền riêng tư:</strong>
+                    <ul>
+                        <li>Hệ thống KHÔNG thu thập thông tin cá nhân (Tên, SĐT).</li>
+                        <li>Dữ liệu vị trí được làm tròn để bảo vệ cá nhân nhưng vẫn đủ để phân tích xu hướng chung.</li>
+                    </ul>
+                </li>
+                <li><strong>Hoạt động mượt mà (Performance):</strong>
+                    <ul>
+                        <li><strong>Chế độ ngoại tuyến:</strong> Ứng dụng tự động tải trước dữ liệu. Khách vẫn có thể nghe thuyết minh khi vào vùng sóng yếu.</li>
+                        <li>Tốc độ tải thông tin cực nhanh, đảm bảo khách không phải chờ đợi.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="roadmap">
+            <h2 class="section-title">8. Lộ trình phát triển (Product Roadmap)</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>Giai đoạn 1: Xây dựng nền tảng</h4>
+                    <ul>
+                        <li>Hoàn thiện trang quản lý (CMS) cho Admin.</li>
+                        <li>Ra mắt phiên bản Web cho khách dùng nhanh qua QR (không cần cài app).</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>Giai đoạn 2: Nâng tầm trải nghiệm</h4>
+                    <ul>
+                        <li>Phát hành ứng dụng chính thức trên App Store & Google Play.</li>
+                        <li>Kích hoạt tính năng tự phát âm thanh theo vị trí khách đứng.</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>Giai đoạn 3: Tối ưu thông minh</h4>
+                    <ul>
+                        <li>Phân tích bản đồ nhiệt để tối ưu không gian du lịch.</li>
+                        <li>Phát triển hệ thống gợi ý món ăn/điểm đến theo sở thích cá nhân.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            fontFamily: 'Plus Jakarta Sans',
+            securityLevel: 'loose'
+        });
+    </script>
+
+    <script>
+        // Smooth scrolling & active state for sidebar links
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.sidebar a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
+            });
+        });
+
+        navLinks.forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElt = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetElt.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
