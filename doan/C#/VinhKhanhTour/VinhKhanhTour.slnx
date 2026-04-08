@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../../Projects/VinhKhanhTour/VinhKhanhTour.Api/VinhKhanhTour.Api.csproj" />
+  <Project Path="../../Projects/VinhKhanhTour/VinhKhanhTour.CMS/VinhKhanhTour.CMS.csproj" />
+  <Project Path="../../Projects/VinhKhanhTour/VinhKhanhTour.Shared/VinhKhanhTour.Shared.csproj" />
+  <Project Path="VinhKhanhTour/VinhKhanhTour.csproj" />
+</Solution>

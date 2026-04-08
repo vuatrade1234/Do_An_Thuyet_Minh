@@ -1,0 +1,192 @@
+﻿@page "/translations"
+@inject CmsApiService Api
+@inject ISnackbar Snackbar
+
+<MudText Typo="Typo.h4" Class="mb-4">🌐 Quản lý Bản dịch</MudText>
+
+@if (_loading)
+{
+    <MudProgressLinear Indeterminate="true" Color="Color.Primary" />
+}
+else
+{
+    <MudTable Items="_pois" Hover="true" Striped="true">
+        <HeaderContent>
+            <MudTh Style="min-width:180px">Tên POI</MudTh>
+            <MudTh Style="min-width:80px">🇻🇳 VI</MudTh>
+            <MudTh Style="min-width:80px">🇬🇧 EN</MudTh>
+            <MudTh Style="min-width:80px">🇨🇳 ZH</MudTh>
+            <MudTh Style="min-width:80px">🇯🇵 JA</MudTh>
+            <MudTh Style="min-width:80px">🇰🇷 KO</MudTh>
+            <MudTh Style="min-width:160px">Thao tác</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>@context.Name</MudTd>
+            @foreach (var lang in _langs)
+            {
+                <MudTd>
+                    @if (context.Content.ContainsKey(lang) && !string.IsNullOrEmpty(context.Content[lang]))
+                    {
+                        <MudIcon Icon="@Icons.Material.Filled.CheckCircle"
+                                 Color="Color.Success" Size="Size.Small" />
+                    }
+                    else
+                    {
+                        <MudIcon Icon="@Icons.Material.Filled.Cancel"
+                                 Color="Color.Error" Size="Size.Small" />
+                    }
+                </MudTd>
+            }
+            <MudTd>
+                <MudButton Variant="Variant.Outlined" Size="Size.Small"
+                           Color="Color.Primary"
+                           OnClick="() => OpenEditor(context)">
+                    ✏️ Sửa
+                </MudButton>
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+}
+
+@if (_editing != null)
+{
+    <MudPaper Class="pa-4 mt-4" Elevation="3">
+        <MudText Typo="Typo.h6" Class="mb-3">
+            ✏️ Sửa nội dung: @_editing.Name
+        </MudText>
+
+        @* Nút Auto dịch Gemini — chỉ gọi khi bấm, không tự động *@
+        <MudPaper Class="pa-3 mb-4" Elevation="1"
+                  Style="background:#F3E5F5; border-left:4px solid #7B1FA2">
+            <MudText Typo="Typo.subtitle2" Class="mb-2">
+                🤖 Tự động dịch bằng Gemini AI
+            </MudText>
+            <MudText Typo="Typo.caption" Color="Color.Secondary" Class="mb-2">
+                Nhập nội dung tiếng Việt trước, rồi bấm dịch. Kết quả sẽ điền vào EN/ZH/JA/KO.
+            </MudText>
+            <MudButton Variant="Variant.Filled"
+                       Color="Color.Secondary"
+                       Size="Size.Small"
+                       Disabled="_translating"
+                       StartIcon="@Icons.Material.Filled.Translate"
+                       OnClick="AutoTranslate">
+                @if (_translating)
+                {
+                    <MudProgressCircular Size="Size.Small" Indeterminate="true" Class="mr-2" />
+                    <span>Đang dịch...</span>
+                }
+                else
+                {
+                    <span>🤖 Dịch tự động (EN / ZH / JA / KO)</span>
+                }
+            </MudButton>
+        </MudPaper>
+
+        <MudGrid>
+            @foreach (var lang in _langMap)
+            {
+                <MudItem xs="12">
+                    <MudTextField Value="@GetContent(_editing, lang.Key)"
+                                  ValueChanged="@((string v) => SetContent(_editing, lang.Key, v))"
+                                  Label="@lang.Value"
+                                  Variant="Variant.Outlined"
+                                  Lines="3" />
+                </MudItem>
+            }
+        </MudGrid>
+
+        <MudButton Color="Color.Primary" Variant="Variant.Filled"
+                   Class="mt-3" OnClick="SaveEditing">
+            💾 Lưu
+        </MudButton>
+        <MudButton Class="mt-3 ml-2" OnClick="() => _editing = null">
+            Hủy
+        </MudButton>
+    </MudPaper>
+}
+
+@code {
+    List<PoiModel> _pois = new();
+    PoiModel? _editing = null;
+    bool _loading = true;
+    bool _translating = false;
+
+    readonly string[] _langs = { "vi", "en", "zh", "ja", "ko" };
+
+    readonly Dictionary<string, string> _langMap = new()
+    {
+        { "vi", "🇻🇳 Tiếng Việt" },
+        { "en", "🇬🇧 English" },
+        { "zh", "🇨🇳 中文" },
+        { "ja", "🇯🇵 日本語" },
+        { "ko", "🇰🇷 한국어" },
+    };
+
+    protected override async Task OnInitializedAsync()
+    {
+        _pois = await Api.GetPoisAsync() ?? new();
+        _loading = false;
+    }
+
+    void OpenEditor(PoiModel poi) => _editing = poi;
+
+    string GetContent(PoiModel poi, string lang)
+        => poi.Content.TryGetValue(lang, out var v) ? v : "";
+
+    void SetContent(PoiModel poi, string lang, string value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+            poi.Content.Remove(lang);
+        else
+            poi.Content[lang] = value;
+    }
+
+    async Task SaveEditing()
+    {
+        if (_editing == null) return;
+        await Api.SavePoiAsync(_editing);
+        Snackbar.Add("✅ Đã lưu bản dịch!", Severity.Success);
+        _editing = null;
+    }
+
+    // ── Auto dịch Gemini — chỉ gọi khi bấm nút ──────────────────────
+    async Task AutoTranslate()
+    {
+        if (_editing == null) return;
+
+        // Lấy nội dung tiếng Việt
+        var viText = GetContent(_editing, "vi");
+        if (string.IsNullOrWhiteSpace(viText))
+        {
+            Snackbar.Add("⚠️ Nhập nội dung tiếng Việt trước!", Severity.Warning);
+            return;
+        }
+
+        _translating = true;
+        try
+        {
+            var result = await Api.TranslateAsync(viText);
+            if (result == null)
+            {
+                Snackbar.Add("❌ Dịch thất bại, thử lại sau!", Severity.Error);
+                return;
+            }
+
+            // Điền kết quả vào các ô ngôn ngữ
+            if (!string.IsNullOrEmpty(result.En)) SetContent(_editing, "en", result.En);
+            if (!string.IsNullOrEmpty(result.Zh)) SetContent(_editing, "zh", result.Zh);
+            if (!string.IsNullOrEmpty(result.Ja)) SetContent(_editing, "ja", result.Ja);
+            if (!string.IsNullOrEmpty(result.Ko)) SetContent(_editing, "ko", result.Ko);
+
+            Snackbar.Add("✅ Dịch xong! Kiểm tra lại rồi bấm Lưu.", Severity.Success);
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"❌ Lỗi: {ex.Message}", Severity.Error);
+        }
+        finally
+        {
+            _translating = false;
+        }
+    }
+}

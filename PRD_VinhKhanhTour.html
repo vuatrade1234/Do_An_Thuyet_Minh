@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Requirements Document (PRD) - Vinh Khanh Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --secondary: #475569;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 300px;
+            background: var(--card-bg);
+            height: 100vh;
+            border-right: 1px solid var(--border);
+            position: fixed;
+            padding: 2rem 1.5rem;
+            overflow-y: auto;
+            z-index: 100;
+        }
+
+        .sidebar h2 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 500;
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: var(--primary-light);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 300px;
+            padding: 3rem 4rem;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        /* Header Title */
+        .page-header {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+
+        .page-header p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        h2.section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            scroll-margin-top: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        ul,
+        ol {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+            color: var(--secondary);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Meta Info Card */
+        .meta-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .student-team-card {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .student-team-card h4 {
+            color: #166534;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #bbf7d0;
+            padding-bottom: 0.75rem;
+        }
+
+        .student-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .student-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 1.05rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Database Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: #f1f5f9;
+            font-weight: 600;
+            color: var(--secondary);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Tags */
+        .tags {
+            margin-top: 1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.35rem 0.85rem;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tag.success {
+            background: #d1fae5;
+            color: #047857;
+        }
+
+        .tag.warning {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .tag.danger {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+        /* Mermaid Wrapper */
+        .mermaid-wrapper {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mermaid {
+            background-color: transparent !important;
+        }
+
+        /* Info box */
+        .info-box {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary);
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .info-box.warning {
+            background: #fef3c7;
+            border-left-color: var(--warning);
+        }
+
+        .info-box h4 {
+            margin-top: 0;
+            color: var(--text-main);
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="sidebar">
+        <h2>🧭 VinhKhanh Tour</h2>
+        <ul>
+            <li><a href="#overview" class="active">1. Tổng quan & Bối cảnh</a></li>
+            <li><a href="#objectives">2. Mục tiêu & Chỉ số đo lường</a></li>
+            <li><a href="#target">3. Đối tượng & Hành trình</a></li>
+            <li><a href="#architecture">4. Kiến trúc hệ thống</a></li>
+            <li><a href="#features">5. Yêu cầu tính năng chi tiết</a></li>
+            <li><a href="#data-model">6. Mô hình dữ liệu</a></li>
+            <li><a href="#non-functional">7. Yêu cầu phi chức năng</a></li>
+            <li><a href="#roadmap">8. Lộ trình phát triển</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Tài liệu đặc tả yêu cầu sản phẩm (PRD)</h1>
+            <p class="subtitle">Dự án: Hệ thống quản lý và hướng dẫn du lịch VinhKhanh Tour (CMS & Mobile App)</p>
+        </header>
+
+        <div class="meta-card">
+
+            <div class="meta-item">
+                <span class="meta-label">Nền tảng</span>
+                <span class="meta-value">Mobile Application & Content Management System</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Công nghệ cốt lõi</span>
+                <span class="meta-value">C# .NET, Firestore</span>
+            </div>
+        </div>
+
+        <div class="student-team-card">
+            <h4>Nhóm Thực Hiện Nghiên Cứu</h4>
+            <div class="student-row">
+                <div class="meta-item">
+                    <span class="meta-label" style="color: #166534;">Họ và Tên Sinh Viên</span>
+                    <span class="meta-value" style="color: #14532d;">Nguyễn Trung Nghĩa</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label" style="color: #166534;">Mã số Sinh viên (MSSV)</span>
+                    <span class="meta-value" style="color: #14532d;">3123411197</span>
+                </div>
+            </div>
+            <div class="student-row">
+                <div class="meta-item">
+                    <span class="meta-label" style="color: #166534;">Họ và Tên Sinh Viên</span>
+                    <span class="meta-value" style="color: #14532d;">Lê Hoàng Giang</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label" style="color: #166534;">Mã số Sinh viên (MSSV)</span>
+                    <span class="meta-value" style="color: #14532d;">3123411077</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="overview">
+            <h2 class="section-title">1. Tổng quan & Bối cảnh (Background & Overview)</h2>
+            <p><strong>VinhKhanh Tour</strong> là một giải pháp công nghệ toàn diện nhằm số hóa và nâng tầm trải nghiệm
+                du lịch tại các khu ẩm thực, nhà hàng. Thay vì phụ thuộc vào hướng dẫn viên du
+                lịch trực tiếp hoặc các bảng thông tin tĩnh truyền thống, du khách có thể chủ động khám phá qua thiết bị
+                di động cá nhân.</p>
+            <p><strong>Bối cảnh thực trạng (Problem Statement):</strong></p>
+            <ul>
+                <li>Khách tham quan cá nhân thường gặp khó khăn trong việc tiếp cận các thông tin
+                    chuyên sâu tại các điểm tham quan.</li>
+                <li>Hệ thống biển báo thông tin thiếu sự đa dạng, tạo ra rào cản ngôn ngữ đối với đa số du khách quốc
+                    tế.</li>
+                <li>Ban quản lý gặp nhiều rào cản trong quá trình thu thập và phân tích dữ liệu hành vi của du khách
+                    nhằm đánh giá và nâng cao chất lượng dịch vụ.</li>
+            </ul>
+        </section>
+
+        <section id="objectives">
+            <h2 class="section-title">2. Mục tiêu & Chỉ số đo lường (Objectives & KPIs)</h2>
+
+            <h3>Mục tiêu Kinh doanh (Business Goals)</h3>
+            <ul>
+                <li><strong>Nâng cao trải nghiệm du lịch:</strong> Cung cấp hệ thống thông tin đa ngôn ngữ kết hợp giọng
+                    nói (Audio) tự động, góp phần tối ưu sự hài lòng của du khách lên mức 80%.</li>
+                <li><strong>Thấu hiểu hành vi du khách:</strong> Thu thập dữ liệu di chuyển (được ẩn danh) từ ứng dụng
+                    nhằm phục vụ cho việc tối ưu hóa lộ trình và quy hoạch không gian tham quan.</li>
+                <li><strong>Tối ưu hóa chi phí vận hành:</strong> Cơ chế quản lý CMS cho phép Ban ban quản lý cập nhật
+                    nội dung theo thời gian thực mà không phụ thuộc vào việc thay thế cấu trúc biển báo vật lý.</li>
+            </ul>
+
+            <h3>Chỉ số Đo lường Hiệu quả (Key Success Metrics - KPIs)</h3>
+            <ul>
+                <li><strong>Tỷ lệ chuyển đổi:</strong> Tối thiểu 40% khách tham quan thực hiện tải ứng dụng hoặc truy
+                    cập qua mã QR.</li>
+                <li><strong>Thời gian tương tác (Session Duration):</strong> Trung bình người dùng tương tác với hệ
+                    thống và theo dõi > 60% tổng thời lượng của các Điểm Audio (POI).</li>
+                <li><strong>Hiệu suất hệ thống:</strong> API phản hồi nhanh chóng (chuẩn < 200ms) và duy trì độ ổn định
+                        (Uptime) ở mức 99.9%.</li>
+            </ul>
+        </section>
+
+        <section id="target">
+            <h2 class="section-title">3. Đối tượng & Hành trình </h2>
+
+            <h3>3.1. Chân dung Người dùng (User Personas)</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎒</div>
+                    <h3>Khách Tham Quan (End-User)</h3>
+                    <p><strong>Nhu cầu:</strong> Có nhu cầu tìm hiểu ẩm thực và ưu tiên sự
+                        linh hoạt trong lộ trình di chuyển. Yêu cầu giao diện ứng dụng trực quan và hỗ trợ ngôn ngữ phù
+                        hợp.</p>
+                    <p><strong>Hành vi định danh:</strong> Ưu tiên phương thức tra cứu thông tin nhanh chóng qua mã QR.
+                        Thường xuyên thay đổi vị trí nên yêu cầu hệ thống hoạt động ổn định ngay cả trong điều kiện kết
+                        nối mạng hạn chế.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍💼</div>
+                    <h3>Quản Trị Hệ Thống (Admin)</h3>
+                    <p><strong>Nhu cầu:</strong> Yêu cầu hệ thống thao tác trực quan để thiết lập nội dung các tuyến
+                        Tour và Điểm tham quan (POI), quản lý thư viện đa phương tiện hiệu quả và đối soát tọa độ trên
+                        nền tảng bản đồ số.</p>
+                    <p><strong>Hành vi định danh:</strong> Thao tác chủ yếu trên giao diện máy tính nghiệp vụ, cần hệ
+                        thống báo cáo (Dashboard) chuẩn hóa và biểu đồ phân tích một cách chi tiết để báo cáo.</p>
+                </div>
+            </div>
+
+            <h3>3.2. Sơ đồ Luồng nghiệp vụ (User Flow)</h3>
+            <p>Phác thảo hành trình tiêu biểu của du khách cá nhân khi tiếp nối và tương tác với nền tảng.</p>
+            <div class="mermaid-wrapper">
+                <div class="mermaid">
+                    graph TD;
+                    A[Khách đến quán ăn] --> B[Thực hiện quét QR / Cài đặt Ứng dụng];
+                    B --> C[Lựa chọn ngôn ngữ hiển thị];
+                    C --> D[Truy cập bản đồ Tour nội khu];
+                    D --> E{Di chuyển vào phạm vi điểm POI?};
+                    E -- Ghi nhận Có --> F[Hệ thống nhận diện vị trí hoặc Khách thao tác quét QR];
+                    F --> G[Phát Audio Guide & Hiển thị nội dung chi tiết];
+                    G --> H[Khách di chuyển qua định tuyến POI mới];
+                    H --> E;
+                    E -- Ghi nhận Không (Kịch bản kết thúc) --> I[Hệ thống lưu vết dữ liệu Analytic];
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture">
+            <h2 class="section-title">4. Kiến trúc Hệ thống (System Architecture)</h2>
+            <p>Hệ thống được thiết kế theo mô hình Client-Server hiện đại, phân tách rõ ràng trách nhiệm giữa phân hệ
+                quản trị nội dung (CMS) và ứng dụng dành cho khách hàng (Mobile Client).</p>
+
+            <div class="mermaid-wrapper">
+                <div class="mermaid">
+                    flowchart LR
+                    subgraph client [Client Applications]
+                        mobile[Mobile App / Web App]
+                        cms[Web CMS Admin]
+                    end
+
+                    subgraph backend [Backend Services]
+                        t_api[.NET Core API]
+                        auth[Firebase Authentication]
+                    end
+
+                    subgraph db [Data Tier]
+                        fstore[(Cloud Firestore DB)]
+                        storage[(Cloud Storage Media)]
+                    end
+
+                    mobile --> t_api
+                    cms --> t_api
+                    cms --> auth
+                    t_api --> fstore
+                    t_api --> storage
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>Công nghệ triển khai:</h4>
+                <p><strong>Backend Architecture:</strong> C# .NET 8 (Web API), tích hợp Mapster và Entity Framework Core
+                    logic.</p>
+                <p><strong>Database Tier:</strong> Cơ sở dữ liệu phi quan hệ Google Cloud Firestore giúp tối ưu tốc độ
+                    đọc theo thời gian thực; Firebase Storage để lưu trữ và phân phối nội dung Audio/Image.</p>
+                <p><strong>Frontend Admin Services:</strong> React framework mở rộng cùng việc tích hợp chặt chẽ với
+                    Google Maps API nền tảng.</p>
+                <p><strong>Mobile Client Services:</strong> Giao diện hiển thị người dùng xây dựng trên nền Flutter /
+                    React Native đáp ứng trên cả hai môi trường hệ điều hành chuẩn iOS và Android.</p>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2 class="section-title">5. Yêu cầu tính năng chi tiết (Detailed Features)</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>5.1 Xác thực & Phân cấp quyền truy cập</h3>
+                    <p>CMS cấp phát quyền truy cập bảo mật dựa trên chuẩn Firebase Auth. Đồng thời thiết lập cơ chế phân
+                        quyền (Role-Based Control) cho SuperAdmin và ContentEditor để kiểm soát luồng thao tác với dữ
+                        liệu nền tảng.</p>
+                    <div class="tags">
+                        <span class="tag">Firebase Auth</span>
+                        <span class="tag">JWT Bearer</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>5.2 Quản trị thông tin Điểm tham quan (POI)</h3>
+                    <p>Module cung cấp giao diện tương tác trên bản đồ (GMap Web) để trích xuất tọa độ địa lý. Cho phép
+                        định cấu hình bán kính kích hoạt (Radius) và kiểm duyệt chuỗi hình ảnh, âm thanh chuẩn hóa đa
+                        ngôn ngữ.</p>
+                    <div class="tags">
+                        <span class="tag">Google Maps API</span>
+                        <span class="tag">File Storage Uploads</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>5.3 Quản lý luồng Tuyến (Tour)</h3>
+                    <p>Cung cấp chức năng thiết lập mới các Tour, liên kết các POI có sẵn vào một lộ trình cụ thể. Hệ
+                        thống tự khởi tạo mã QR tĩnh tương ứng cho từng lộ trình phục vụ mục đích in ấn vật lý.</p>
+                    <div class="tags">
+                        <span class="tag success">QR Code Auto-generation</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>5.4 Đa ngôn ngữ và Bản địa hóa</h3>
+                    <p>Cấu trúc lưu trữ động (Dictionary) đối với trường Content và đường dẫn file Audio. Kịch bản
+                        Fallback hoạt động nếu tại thời điểm đó bài nghe tiếng Anh chưa được cập nhật, dữ liệu sẽ tự
+                        động sử dụng Audio tiếng Việt làm dự phòng.</p>
+                    <div class="tags">
+                        <span class="tag">Dynamic Locale Content</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔉</div>
+                    <h3>5.5 Nhận diện vị trí</h3>
+                    <p>Tại ứng dụng Client (Mobile), hệ thống sẽ giám sát vị trí thông qua Service GPS. Khi du khách
+                        bước vào vùng ranh giới (Radius) của điểm POI, ứng dụng sẽ gửi thông báo mềm (Push Notification)
+                        và chủ động phát Audio tương ứng.</p>
+                    <div class="tags">
+                        <span class="tag warning">Background Location Access</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>5.6 Tracking & Trích xuất Analytics</h3>
+                    <p>Ghi nhận hệ tọa độ theo chu kỳ của khách hàng (lộ trình di chuyển). Biểu diễn theo dạng bản đồ
+                        nhiệt (Heatmap) trên Dashboard Admin giúp phân tích xu thế, tối ưu không gian cho các điểm dễ tụ
+                        tập đám đông.</p>
+                    <div class="tags">
+                        <span class="tag danger">Encrypted Data & Anonymity</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="data-model">
+            <h2 class="section-title">6. Mô hình dữ liệu (Data Models - Firestore)</h2>
+            <p>Hệ thống tuân thủ mô hình CSDL phi quan hệ (NoSQL Format) trên nền tảng Firestore. Kiến trúc cụ thể cho
+                các Collection cốt lõi được mô tả dưới đây:</p>
+
+            <h3>1. Lược đồ Dữ liệu </h3>
+            <table>
+                <tr>
+                    <th>Thuộc tính</th>
+                    <th>Phân loại (Type)</th>
+                    <th>Mô tả cấu trúc</th>
+                </tr>
+                <tr>
+                    <td>Id</td>
+                    <td>String (Auto)</td>
+                    <td>Khóa chính (Document ID)</td>
+                </tr>
+                <tr>
+                    <td>Name, Description</td>
+                    <td>String</td>
+                    <td>Cụm thông tin đặt tên, lưu trữ tham chiếu chung</td>
+                </tr>
+                <tr>
+                    <td>CoverImageUrl</td>
+                    <td>String</td>
+                    <td>Tuyến liên kết ảnh giao diện</td>
+                </tr>
+                <tr>
+                    <td>PoiIds</td>
+                    <td>List&lt;String&gt;</td>
+                    <td>Mảng tham chiếu ID của các cấu phần POI liên quan</td>
+                </tr>
+                <tr>
+                    <td>IsActive</td>
+                    <td>Boolean</td>
+                    <td>Cờ phân trạng thái khả dụng lên hệ thống chung</td>
+                </tr>
+                <tr>
+                    <td>QrCodeUrl</td>
+                    <td>String</td>
+                    <td>Tham chiếu kho lưu trữ điểm QR Code khởi tạo</td>
+                </tr>
+                <tr>
+                    <td>TotalScans</td>
+                    <td>Number</td>
+                    <td>Biến đếm lưu lượng quét truy cập</td>
+                </tr>
+            </table>
+
+            <h3>2. Lược đồ Dữ liệu Điểm đặc trưng (Poi Collection)</h3>
+            <table>
+                <tr>
+                    <th>Thuộc tính</th>
+                    <th>Phân loại (Type)</th>
+                    <th>Mô tả cấu trúc</th>
+                </tr>
+                <tr>
+                    <td>Id</td>
+                    <td>String</td>
+                    <td>Khóa chính (Document ID)</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>String</td>
+                    <td>Định danh quản trị nội bộ đối với điểm lưu ý</td>
+                </tr>
+                <tr>
+                    <td>Latitude, Longitude</td>
+                    <td>Number (Double)</td>
+                    <td>Định vị hệ tọa độ địa lý chuẩn</td>
+                </tr>
+                <tr>
+                    <td>Radius</td>
+                    <td>Number (Double)</td>
+                    <td>Tham số phạm vi giới hạn nhận diện (đo theo mét)</td>
+                </tr>
+                <tr>
+                    <td>DisplayOrder</td>
+                    <td>Number (Int)</td>
+                    <td>Thứ tự đề xuất trong kiến trúc Tour</td>
+                </tr>
+                <tr>
+                    <td>Translations</td>
+                    <td>Map&lt;String, PoiLangConfig&gt;</td>
+                    <td>Bộ dữ liệu Map bản đồ ngôn ngữ truy xuất tĩnh</td>
+                </tr>
+            </table>
+
+
+
+            <h3>3. Lược đồ Phân tích</h3>
+            <table>
+                <tr>
+                    <th>Thuộc tính</th>
+                    <th>Phân loại (Type)</th>
+                    <th>Mô tả cấu trúc</th>
+                </tr>
+                <tr>
+                    <td>SessionId</td>
+                    <td>String</td>
+                    <td>Token phiên giao dịch truy xuất tự động của một user cụ thể</td>
+                </tr>
+                <tr>
+                    <td>EventType</td>
+                    <td>String</td>
+                    <td>Cờ sự kiện, bao gồm: "enter_poi", "leave_poi", "play_audio"</td>
+                </tr>
+                <tr>
+                    <td>TargetId</td>
+                    <td>String</td>
+                    <td>Định danh đối chiếu lên hệ Tour/POI tương quan</td>
+                </tr>
+                <tr>
+                    <td>Lat, Lng</td>
+                    <td>Number</td>
+                    <td>Tọa độ bắt được tại thời điểm (tiêu chuẩn bảo mật làm tròn 3 chữ số thập phân)</td>
+                </tr>
+                <tr>
+                    <td>Timestamp</td>
+                    <td>Timestamp</td>
+                    <td>Dấu thời gian chuẩn UTC</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="non-functional">
+            <h2 class="section-title">7. Yêu cầu phi chức năng (Non-Functional Requirements)</h2>
+            <ul>
+                <li><strong>7.1 Yêu cầu Bảo mật, An toàn thông tin (Security Standard):</strong>
+                    <ul>
+                        <li>Giao thức API trao đổi phải tuân thủ chuẩn xác thực JWT qua hạ tầng của Firebase.</li>
+                        <li>Quy chuẩn kiểm soát quyền truy cập: Admin thao tác đặc quyền đọc/ghi trên mọi Collections,
+                            ngược lại phía Client Mobile chỉ kế thừa quyền Đọc (Read-Only) và quyền chèn bổ sung nhật ký
+                            vào Analytics Collection (Append-Only Method).</li>
+                    </ul>
+                </li>
+                <li><strong>7.2 Bảo vệ quyền riêng tư người dùng đích (Privacy First):</strong>
+                    <ul>
+                        <li>Hệ thống vận hành theo quy chuẩn No PII (Không thu thập Thông tin định danh cá nhân) như
+                            Tên, SĐT, hoặc MAC Device.</li>
+                        <li>Cấu trúc lưu vết GPS tự động làm tròn trị số vào cơ sở dữ liệu làm giảm mức độ chi tiết (sai
+                            số xấp xỉ ~111m) - hỗ trợ thiết lập Heatmap mà không vi phạm quy chuẩn riêng tư.</li>
+                    </ul>
+                </li>
+                <li><strong>7.3 Tiêu chuẩn Hiệu năng & Khả năng Ngoại tuyến (Performance System):</strong>
+                    <ul>
+                        <li><strong>Dữ liệu đệm (Caching Mechanism):</strong> Đối với lần khởi chạy thiết lập Tour, ứng
+                            dụng đồng bộ hóa văn bản (Text) và file Audio đính kèm và lưu trữ vào phân vùng bộ nhớ cục
+                            bộ (SQLite / Local Storage) để duy trì khả năng hồi đáp trong trường hợp thiết bị mất kết
+                            nối Internet tĩnh.</li>
+                        <li>Độ trễ tiêu chuẩn (Latency) cho các endpoint trích xuất POI đảm bảo <= 300ms.</li>
+                    </ul>
+                </li>
+                <li><strong>7.4 Quản trị toàn vẹn hệ thống (Maintainability Scale):</strong> Áp dụng cấu trúc Clean
+                    Architecture cho khối Backend kết hợp nguyên lý CQRS rút gọn cho phép khả năng mở rộng (Scale-out)
+                    riêng biệt tài nguyên đọc tải lưu lượng trên diện rộng ứng dụng phục vụ du lịch.</li>
+            </ul>
+        </section>
+
+        <section id="roadmap">
+            <h2 class="section-title">8. Lộ trình phát triển sản phẩm (Product Roadmap)</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>Giai đoạn 1: MVP Nền tảng (Tháng 1-2)</h4>
+                    <ul>
+                        <li>Triển khai lõi backend C# Web API & Khởi tạo thiết lập Google Firebase.</li>
+                        <li>Xây dựng CMS phục vụ Admin thiết lập trực quan hệ thống Tour và POI.</li>
+                        <li>Xây dựng Web-App hỗ trợ khách tham quan truy cập và tiếp nhận nội dung đa phương tiện tức
+                            thì qua thao tác quét QR (không yêu cầu cài đặt ứng dụng).</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>Giai đoạn 2: Nâng tầm Trải nghiệm (Tháng 3-4)</h4>
+                    <ul>
+                        <li>Đóng gói Ứng dụng gốc phân phối qua các kho tải cho hệ sinh thái di động Native (App Store &
+                            Google Play).</li>
+                        <li>Kích hoạt tính năng Geo-fencing cảnh báo vùng lân cận điểm POI.</li>
+                        <li>Áp dụng luồng Audio phát nền (Background Service) và xây dựng Caching Database duy trì tác
+                            vụ ngoại tuyến.</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>Giai đoạn 3: Phân tích Dữ liệu Lớn (Tháng 5+)</h4>
+                    <ul>
+                        <li>Khai thác lượng dữ liệu (Logs) và hiển thị trực quan thông qua Heatmap Dashboard trên nền
+                            tảng Admin.</li>
+                        <li>Phát triển Hệ thống Gợi ý (Recommend System) đề xuất lộ trình trải nghiệm cá nhân hóa.</li>
+                        <li>Mở rộng API hệ thống kết nối với các đối tác xuất vé và phân phối dịch vụ tiện ích khác.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- Thư viện MermaidJS cho biểu đồ -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            fontFamily: 'Plus Jakarta Sans',
+            securityLevel: 'loose'
+        });
+    </script>
+
+    <script>
+        // Set current date
+        const date = new Date();
+        document.getElementById('current-date').innerText = date.toLocaleDateString('vi-VN', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // Smooth scrolling & active state for sidebar links
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.sidebar a');
+
+        // Bắt sự kiện cuộn trang để active menu
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
+            });
+        });
+
+        // Click để cuộn
+        navLinks.forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                navLinks.forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElt = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetElt.offsetTop - 80, // Offset for fixed header/breathing room
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

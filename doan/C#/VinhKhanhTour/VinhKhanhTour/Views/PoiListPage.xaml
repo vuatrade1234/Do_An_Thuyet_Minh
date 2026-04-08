@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VinhKhanhTour.Views.PoiListPage"
+             BackgroundColor="#F5F7FA"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto,Auto,Auto,*">
+
+        <!-- Header -->
+        <Grid Grid.Row="0" BackgroundColor="#1A237E" Padding="16,24,16,36">
+            <Label x:Name="LblListTitle"
+                   Text="Điểm tham quan"
+                   TextColor="White" FontSize="20" FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+        </Grid>
+
+        <!-- Thanh tìm kiếm (Lơ lửng, kéo lên chèn vào header một nửa) -->
+        <Border Grid.Row="1" BackgroundColor="White"
+                Margin="16,-24,16,0" Padding="16,6" StrokeThickness="0">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="28"/>
+            </Border.StrokeShape>
+            <Border.Shadow>
+                <Shadow Brush="Black" Opacity="0.1" Radius="12" Offset="0,4"/>
+            </Border.Shadow>
+            <Grid ColumnDefinitions="Auto,*,Auto">
+                <Label Grid.Column="0" Text="🔍" FontSize="18"
+                       VerticalOptions="Center" Margin="0,0,12,0" TextColor="#1A237E"/>
+                <Entry Grid.Column="1" x:Name="SearchEntry"
+                       Placeholder="Tìm kiếm địa điểm..."
+                       FontSize="15" BackgroundColor="Transparent"
+                       TextChanged="OnSearchTextChanged"/>
+                <Button Grid.Column="2" Text="✕" x:Name="ClearBtn"
+                        IsVisible="False"
+                        BackgroundColor="Transparent" TextColor="#B0BEC5"
+                        FontSize="16" Padding="8,0"
+                        Clicked="OnClearSearch"/>
+            </Grid>
+        </Border>
+
+        <!-- Gợi ý tìm kiếm -->
+        <Border Grid.Row="2" x:Name="SuggestionPanel"
+                IsVisible="False" BackgroundColor="White"
+                Margin="16,8,16,0" Padding="0,8" StrokeThickness="0">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="16"/>
+            </Border.StrokeShape>
+            <Border.Shadow>
+                <Shadow Brush="Black" Opacity="0.05" Radius="8" Offset="0,4"/>
+            </Border.Shadow>
+            <CollectionView x:Name="SuggestionList" MaximumHeightRequest="250">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="16,12" ColumnDefinitions="Auto,*">
+                            <Label Grid.Column="0" Text="{Binding CategoryEmoji}"
+                                   FontSize="22" VerticalOptions="Center"/>
+                            <VerticalStackLayout Grid.Column="1" Margin="14,0" VerticalOptions="Center">
+                                <Label Text="{Binding LocalizedName}"
+                                       FontSize="14" FontAttributes="Bold"
+                                       TextColor="#1A237E"/>
+                                <Label Text="{Binding LocalizedDescription}"
+                                       FontSize="12" TextColor="#78909C"
+                                       MaxLines="1"
+                                       LineBreakMode="TailTruncation"/>
+                            </VerticalStackLayout>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSuggestionTapped"
+                                                      CommandParameter="{Binding .}"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Border>
+
+        <!-- Danh sách POI (Thẻ lớn - Big Cards mượt mà) -->
+        <CollectionView Grid.Row="3" x:Name="PoiList" Margin="16,16,16,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="0,0,0,24" BackgroundColor="White"
+                            StrokeThickness="0">
+                        <Border.Shadow>
+                            <Shadow Brush="#1A237E" Opacity="0.12" Radius="16" Offset="0,8"/>
+                        </Border.Shadow>
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="24"/>
+                        </Border.StrokeShape>
+
+                        <Grid HeightRequest="260">
+                            <!-- Ảnh bìa tràn viền thẻ -->
+                            <Image Source="{Binding CoverImage}"
+                                   Aspect="AspectFill" HeightRequest="260"/>
+                            
+                            <!-- Bầu trời gradient đệm mờ từ đáy lên để dễ đọc chữ -->
+                            <BoxView VerticalOptions="End" HeightRequest="160">
+                                <BoxView.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="Transparent" Offset="0.0" />
+                                        <GradientStop Color="#CC000000" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </BoxView.Background>
+                            </BoxView>
+
+                            <!-- Distance badge nổi bật ở góc phải trên -->
+                            <Border BackgroundColor="#E65100"
+                                    Padding="12,6" StrokeThickness="0"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="Start"
+                                    Margin="0,16,16,0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="20"/>
+                                </Border.StrokeShape>
+                                <Label Text="{Binding DistanceText}"
+                                       TextColor="White" FontSize="12" FontAttributes="Bold"/>
+                            </Border>
+
+                            <!-- Nội dung chính nổi lên trên phần đáy của ảnh -->
+                            <Grid VerticalOptions="End" Padding="16,20" ColumnDefinitions="*,Auto">
+                                <VerticalStackLayout Grid.Column="0" VerticalOptions="End">
+                                    <HorizontalStackLayout Spacing="6" Margin="0,0,0,6">
+                                        <Border BackgroundColor="{Binding CategoryColor}"
+                                                Padding="8,4" StrokeThickness="0">
+                                            <Border.StrokeShape>
+                                                <RoundRectangle CornerRadius="8"/>
+                                            </Border.StrokeShape>
+                                            <Label Text="{Binding CategoryLabel}"
+                                                   TextColor="White" FontSize="10" FontAttributes="Bold"/>
+                                        </Border>
+                                    </HorizontalStackLayout>
+                                    
+                                    <Label Text="{Binding LocalizedName}"
+                                           FontAttributes="Bold" FontSize="18"
+                                           TextColor="White" LineBreakMode="WordWrap"/>
+                                           
+                                    <Label Text="{Binding LocalizedDescription}"
+                                           FontSize="13" TextColor="#E0E0E0"
+                                           MaxLines="2" LineBreakMode="TailTruncation"
+                                           Margin="0,4,0,0"/>
+                                </VerticalStackLayout>
+
+                                <!-- Nút Tìm Đường hình cúc nổi (FAB mode) -->
+                                <Button Grid.Column="1" Text="🧭"
+                                        BackgroundColor="#FFFFFF" TextColor="#1A237E"
+                                        FontSize="22" WidthRequest="54" HeightRequest="54"
+                                        CornerRadius="27" Padding="0"
+                                        VerticalOptions="End"
+                                        Clicked="OnNavigateClicked"
+                                        CommandParameter="{Binding .}">
+                                    <Button.Shadow>
+                                        <Shadow Brush="Black" Opacity="0.15" Radius="8" Offset="0,4"/>
+                                    </Button.Shadow>
+                                </Button>
+                            </Grid>
+                        </Grid>
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnPoiTapped"
+                                                  CommandParameter="{Binding .}"/>
+                        </Border.GestureRecognizers>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>
