@@ -637,6 +637,8 @@ sequenceDiagram
 | **Mô tả** | Du khách tùy chỉnh trải nghiệm: đổi ngôn ngữ, chọn bán kính nhận diện, tốc độ giọng đọc, số lần lặp audio, thời gian hồi chiêu. |
 | **Điều kiện tiền đề** | Đang ở trang `SettingsPage` |
 | **Các thiết lập khả dụng** | Ngôn ngữ: VI / EN / ZH / JA / KO. Tốc độ giọng: 0.6x / 1.0x / 1.4x / 1.8x. Số lần lặp: 1-5 lần. Cooldown: 3/10/30/60/120 giây. Bán kính: 10/30/50m hoặc Slider. Test TTS thử giọng. |
+| **Luồng chính** | 1. Du khách mở tab Cài đặt → `OnAppearing()` gọi `RefreshLocalizedText()` và `HighlightCurrentLanguage()`. 2. Du khách nhấn chọn ngôn ngữ (VD: 🇬🇧) → `SwitchLanguage(AppLocale.English)` → `LocalizationService.SetLocale()` → sự kiện `LanguageChanged` phát ra toàn App. 3. Chọn tốc độ giọng đọc (🐢/🚶/🚴/🚀) → `SetSpeechRate(rate)` cập nhật static `SpeechRate`. 4. Chọn số lần lặp (1-5) → `SetRepeat(val)` cập nhật static `RepeatCount`. 5. Chọn Cooldown (3/10/30/60/120s) → `SetCooldown(val)` cập nhật static `CooldownSeconds`. 6. Chọn Bán kính nhận diện (10/30/50m hoặc kéo Slider) → `SetRadius(val)` cập nhật static `GlobalRadius`. 7. Nhấn "🔊 Thử giọng" → `TtsService.SpeakAsync()` đọc câu chào bằng ngôn ngữ hiện tại. |
+| **Luồng ngoại lệ** | TTS không hoạt động trên thiết bị → `SpeakAsync()` thất bại âm thầm, không hiển thị lỗi với người dùng. Ngôn ngữ thay đổi nhưng POI không có bản dịch → hiển thị chuỗi key gốc hoặc fallback về Tiếng Việt. |
 
 ### Sơ đồ Sequence
 
