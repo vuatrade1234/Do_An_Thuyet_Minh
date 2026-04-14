@@ -673,3 +673,18 @@ sequenceDiagram
     SP->>TTS: SpeakAsync("Xin chào! Chào mừng đến Phố Ẩm Thực Vĩnh Khánh!", ...)
     TTS-->>U: Phát thử giọng đọc theo ngôn ngữ đã chọn
 ```
+actor A as Quản trị viên
+        participant C as CMS_Users
+        participant D as UserDialog
+        participant U as API
+        A->>C: OnInitializedAsync() -> LoadData()
+        C->>U: GET api/users
+        U-->>C: Array[AppUser]
+        A->>C: EditUser(selectedUser)
+        C->>D: OpenDialog(UserModel)
+        Note over D: Admin chọn ExpiryDate mới
+        A->>D: Submit()
+        D->>U: POST api/users (SaveUserAsync)
+        U-->>D: 200 OK
+        D-->>C: Refresh List
+
